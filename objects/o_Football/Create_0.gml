@@ -14,7 +14,7 @@ random_spin = random_range(0.6, 2.4);
 power_bar_pitch_modifier = 0.7;
 ball_hit_pitch_modifier = 1;
 ball_collide = 1;
-ball_collide_pitch= 1;
+ball_collide_pitch = 0.5;
 
 //Node variables
 node_1_image_xscale = 1;

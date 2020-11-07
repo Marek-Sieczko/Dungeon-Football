@@ -113,7 +113,7 @@ if (place_meeting(x + hsp, y, o_LevelPieceParent)) {
         x += sign(hsp);
     }
 	var football_hit = audio_play_sound(snd_FootballCollide, 1, false);
-	audio_sound_gain(football_hit, )
+	audio_sound_gain(football_hit,  )
 	hsp = -hsp / 2;
 	random_spin = random_range(0.6, 2.4);
 }
