@@ -9,7 +9,7 @@ if (can_collide) && !(has_collided){
 	}
 	
 	o_GameController.current_keys++;
-	
+	instance_destroy();
 	instance_destroy(particle_1);
 	instance_create_layer(x, y, "Wall_Layer", o_key_collect);
 	audio_play_sound(snd_CoinCollected, 1, false);

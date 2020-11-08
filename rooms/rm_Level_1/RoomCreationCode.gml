@@ -3,8 +3,8 @@ global.View_Width = 0;
 global.View_Height=1920;
 
 var _aspect = display_get_width() / display_get_height();
-//var _aspect = 480 / 640; //Tablet size simulation
-var _aspect = 1080 / 1920; //Standard phone
+var _aspect = 480 / 640; //Tablet size simulation
+//var _aspect = 1080 / 1920; //Standard phone
 if _aspect<.49{_aspect=.49;}
 
 global.View_Width = round(global.View_Height*_aspect);

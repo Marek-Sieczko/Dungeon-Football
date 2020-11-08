@@ -12,6 +12,7 @@ instance_create_layer(room_width*0.5, room_height - global.View_Height*0.35, "Us
 
 //Set variables to record time
 milliseconds = 0;
+has_started = false;
 can_time = false;
 
 //Current data from saved data

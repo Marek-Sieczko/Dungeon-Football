@@ -1,17 +1,5 @@
 /// @description Detect tap of the screen
 
-////Get corner co-ordinates for left panel
-//x1 = 0;
-//y1 = 0;
-//x2 = global.View_Width*0.5;
-//y2 = global.View_Height;
-
-////Get corner co-ordinates for right panel
-//x3 = global.View_Width*0.5;
-//y3 = 0;
-//x4 = global.View_Width;
-//y4 = global.View_Height;
-
 //Draw Keys
 draw_sprite_ext(s_GoldenKey, 0, key_1_x, key_1_y, key_1_xscale, key_1_yscale, key_1_angle, c_white, key_1_alpha);
 draw_sprite_ext(s_GoldenKey, 0, key_2_x, key_2_y, key_2_xscale, key_2_yscale, key_2_angle, c_white, key_2_alpha);
@@ -113,7 +101,7 @@ if (key_3_collected) {
 	}
 }
 
-//Draw Timer
+////Draw Timer
 if (can_time) {
 	
 	milliseconds += 100/60;
@@ -160,124 +148,3 @@ if (current_best_time != 9999999) {
 	
 	draw_text_ext_transformed_color(60, 180, string(best_minutes_formatted) + string(best_seconds_formatted) + (best_milliseconds_formatted), 0, global.View_Width, 1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
 }
-
-//Check if click is within the co-ordinates
-//if (_mouse_x >= x1) && (_mouse_x <= x2) && (_mouse_y >= y1) && (_mouse_y <= y2) && !(left_pressed){
-
-//	if mouse_check_button(mb_any) {
-
-//		//Increase timer per frame if power not reset
-//		if (left_can_increase) {
-	
-//			left_current_power_timer++;
-//		}
-
-//		//Check to increase power level
-//		if (left_current_power_timer >= left_power_range) {
-	
-//			left_current_power_level++;
-//			left_current_power_timer = 0;
-//		}
-
-//		//Check to reset the power level if held too long
-//		if left_current_power_level > left_top_power_level {
-	
-//			left_custom_colour = c_red;
-//			left_current_power_level = 1;
-//			left_can_increase = false;
-//		}
-		
-//		if (left_can_increase) {
-			
-//			if left_current_power_level < 21 {left_custom_colour = c_white;}
-//			else {left_custom_colour = c_yellow;}
-//		}
-		
-//		if left_custom_colour != c_red {
-		
-//			draw_circle_color(_mouse_x, _mouse_y, left_current_power_level*5, left_custom_colour, left_custom_colour, false);
-//		}
-//		else {
-			
-//			draw_circle_color(_mouse_x, _mouse_y, left_current_power_level*20, left_custom_colour, left_custom_colour, false);
-//		}
-
-//	}
-//	if mouse_check_button_released(mb_any){
-	
-//		with(o_BallParent) {
-	
-//			power_applied = other.left_current_power_level;
-//			hit_type = "left";
-//			hit = true;
-//			if other.left_current_power_level >= 21 {flash_alpha = 1;}
-//		}
-
-//		can_time = true;
-//		audio_play_sound(snd_FootballTap, 1, false);
-//		left_current_power_timer = 0;
-//		left_current_power_level = 0;
-//		left_can_increase = true;
-//		left_pressed = false;
-		
-//	}
-//}
-
-//if (_mouse_x >= x3) && (_mouse_x <= x4) && (_mouse_y >= y3) && (_mouse_y <= y4) && !(right_pressed){
-
-//	if mouse_check_button(mb_any){
-
-//		//Increase timer per frame if power not reset
-//		if (right_can_increase) {
-	
-//			right_current_power_timer++;
-//		}
-
-//		//Check to increase power level
-//		if (right_current_power_timer >= right_power_range) {
-	
-//			right_current_power_level++;
-//			right_current_power_timer = 0;
-//		}
-
-//		if right_current_power_level > right_top_power_level {
-	
-//			right_custom_colour = c_red;
-//			right_current_power_level = 1;
-//			right_can_increase = false;
-//		}
-		
-//		if (right_can_increase) {
-			
-//			if right_current_power_level < 21 {right_custom_colour = c_white;}
-//			else {right_custom_colour = c_yellow;}
-//		}
-		
-//		if right_custom_colour != c_red {
-			
-//			draw_circle_color(_mouse_x, _mouse_y, right_current_power_level*5, right_custom_colour, right_custom_colour, false);
-//		}
-//		else {
-			
-//			draw_circle_color(_mouse_x, _mouse_y, right_current_power_level*20, right_custom_colour, right_custom_colour, false);
-//		}
-//	}
-	
-//	if mouse_check_button_released(mb_any) {
-		
-//		with(o_BallParent) {
-//			power_applied = other.right_current_power_level;
-//			hit_type = "right";
-//			hit = true;
-//			if other.right_current_power_level >= 21 {flash_alpha = 1;}
-//		}
-
-//		audio_play_sound(snd_FootballTap, 1, false);
-//		can_time = true;
-//		right_current_power_timer = 0;
-//		right_current_power_level = 0;
-//		right_can_increase = true;
-//		right_pressed = false;
-		
-//	}
-//}

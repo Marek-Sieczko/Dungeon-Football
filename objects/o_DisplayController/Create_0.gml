@@ -6,8 +6,8 @@ var _aspect = display_get_width() / display_get_height(); //Get the aspect ratio
 
 // You can use these settings to test out various aspect ratios
 //var _aspect = 1080 / 2400; //Galaxy s8 super narrow screen
-//var _aspect = 480 / 640; //Tablet
-var _aspect = 1080 / 1920; //Standard phone
+var _aspect = 480 / 640; //Tablet
+//var _aspect = 1080 / 1920; //Standard phone
 
 //Restrict horizontal screen size so elements aren't cut off
 if _aspect < .49 {_aspect = .49;}

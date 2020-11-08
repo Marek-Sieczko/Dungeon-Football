@@ -13,8 +13,9 @@ random_spin = random_range(0.6, 2.4);
 
 power_bar_pitch_modifier = 0.7;
 ball_hit_pitch_modifier = 1;
-ball_collide = 1;
-ball_collide_pitch = 0.5;
+ball_hit_volume = 1;
+ball_collide_volume = 1;
+ball_collide_pitch = 1;
 
 //Node variables
 node_1_image_xscale = 1;
@@ -76,8 +77,9 @@ can_animate_node_2 = false;
 node_animation_timer = 0;
 
 //Shader variables
+shadow_alpha = 0.3;
 flash_alpha = 0;
-
+flash_colour = c_white;
 trail_sprite = spr_trail_basic;
 
 alarm[0] = 1;
