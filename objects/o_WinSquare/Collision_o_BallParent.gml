@@ -1,9 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-instance_destroy(o_BallParent);
-with (o_GameController) {
+if !(has_collided) {
 	
-	can_time = false;
-	can_restart = true;
+	with (o_GameController) {
+	
+		can_time = false;
+		can_restart = true;
 	}
+	instance_destroy(o_BallParent);
+	has_collided = true;
+}

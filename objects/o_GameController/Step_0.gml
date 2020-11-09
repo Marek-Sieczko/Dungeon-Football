@@ -19,6 +19,12 @@ if current_keys == total_keys {
 // Restart game
 if (can_restart) {
 	
+	var black_screen = instance_create_layer(x, y, "GUI_Layer", o_BlackBox);
+	
+	with (black_screen) {can_fade_in = true;}
+	
+	audio_play_sound(snd_StageComplete, 1, false);
+	
 	alarm[1] = 180;
 	can_restart = false;
 }

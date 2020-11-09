@@ -96,6 +96,7 @@
     {"id":{"name":"o_CampaignScreenParent","path":"objects/o_CampaignScreenParent/o_CampaignScreenParent.yy",},"order":3,},
     {"id":{"name":"uc_get_y","path":"scripts/uc_get_y/uc_get_y.yy",},"order":3,},
     {"id":{"name":"s_RightHitPanel","path":"sprites/s_RightHitPanel/s_RightHitPanel.yy",},"order":3,},
+    {"id":{"name":"snd_StageComplete","path":"sounds/snd_StageComplete/snd_StageComplete.yy",},"order":8,},
     {"id":{"name":"o_LevelButton_1_4","path":"objects/o_LevelButton_1_4/o_LevelButton_1_4.yy",},"order":11,},
     {"id":{"name":"s_TriangleBlock1","path":"sprites/s_TriangleBlock1/s_TriangleBlock1.yy",},"order":7,},
     {"id":{"name":"uc_set_position","path":"scripts/uc_set_position/uc_set_position.yy",},"order":2,},
