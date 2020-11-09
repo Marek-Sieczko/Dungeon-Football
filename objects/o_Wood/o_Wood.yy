@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_Wall",
-    "path": "sprites/s_Wall/s_Wall.yy",
+    "name": "s_Wood",
+    "path": "sprites/s_Wood/s_Wood.yy",
   },
   "solid": true,
   "visible": false,
@@ -31,7 +31,7 @@
     "path": "folders/Objects/Level Pieces.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_Wall",
+  "name": "o_Wood",
   "tags": [],
   "resourceType": "GMObject",
 }

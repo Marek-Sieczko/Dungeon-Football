@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "s_Wall",
-    "path": "sprites/s_Wall/s_Wall.yy",
+    "name": "s_WoodenPlatformRight1",
+    "path": "sprites/s_WoodenPlatformRight1/s_WoodenPlatformRight1.yy",
   },
-  "solid": true,
-  "visible": false,
+  "solid": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -31,7 +31,7 @@
     "path": "folders/Objects/Level Pieces.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_Wall",
+  "name": "o_WoodenPlatformRight1",
   "tags": [],
   "resourceType": "GMObject",
 }

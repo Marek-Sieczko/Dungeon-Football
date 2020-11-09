@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "s_Wall",
-    "path": "sprites/s_Wall/s_Wall.yy",
-  },
-  "solid": true,
-  "visible": false,
+  "spriteId": null,
+  "solid": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "o_LevelPieceParent",
-    "path": "objects/o_LevelPieceParent/o_LevelPieceParent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -31,7 +25,7 @@
     "path": "folders/Objects/Level Pieces.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_Wall",
+  "name": "o_WoodenPlatformLeft1",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 479,
   "bbox_top": 0,
-  "bbox_bottom": 494,
+  "bbox_bottom": 479,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 480,
-  "height": 495,
+  "height": 480,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"db8f190c-2b9b-415d-a346-4dd9bb15fda4","path":"sprites/s_Background1/s_Background1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"db8f190c-2b9b-415d-a346-4dd9bb15fda4","path":"sprites/s_Background1/s_Background1.yy",},"LayerId":{"name":"b06de26e-441a-4166-bec5-543f59baf358","path":"sprites/s_Background1/s_Background1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_Background1","path":"sprites/s_Background1/s_Background1.yy",},"resourceVersion":"1.0","name":"db8f190c-2b9b-415d-a346-4dd9bb15fda4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3c6fc0a6-e812-4f8a-8747-5472e21384d8","path":"sprites/s_Background1/s_Background1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3c6fc0a6-e812-4f8a-8747-5472e21384d8","path":"sprites/s_Background1/s_Background1.yy",},"LayerId":{"name":"0d853e02-7e17-4bed-81af-ac245ef90c74","path":"sprites/s_Background1/s_Background1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_Background1","path":"sprites/s_Background1/s_Background1.yy",},"resourceVersion":"1.0","name":"3c6fc0a6-e812-4f8a-8747-5472e21384d8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_Background1","path":"sprites/s_Background1/s_Background1.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8a50268c-12d8-4471-b2cb-a4970a77ba57","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"db8f190c-2b9b-415d-a346-4dd9bb15fda4","path":"sprites/s_Background1/s_Background1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"127e9a5c-34ce-432d-8aa9-47e6e581a4d0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3c6fc0a6-e812-4f8a-8747-5472e21384d8","path":"sprites/s_Background1/s_Background1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 240,
-    "yorigin": 247,
+    "yorigin": 240,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_Background1","path":"sprites/s_Background1/s_Background1.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b06de26e-441a-4166-bec5-543f59baf358","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0d853e02-7e17-4bed-81af-ac245ef90c74","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Backgrounds",

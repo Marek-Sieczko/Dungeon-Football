@@ -17,7 +17,7 @@ else if (milliseconds <= current_bronze_time)  && (milliseconds > current_silver
 }
 
 if (milliseconds < current_best_time) {
-
+	
 	selected_struct.best_time = milliseconds;
 }
 
@@ -27,4 +27,4 @@ if !(next_level_lock_state) {
 }
 
 save_level_data();
-game_restart();
+room_goto(rm_Main_Menu);
