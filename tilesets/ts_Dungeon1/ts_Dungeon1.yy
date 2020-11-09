@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_DungeonTileSet1",
-    "path": "sprites/s_DungeonTileSet1/s_DungeonTileSet1.yy",
+    "name": "s_TilesetDungeon1",
+    "path": "sprites/s_TilesetDungeon1/s_TilesetDungeon1.yy",
   },
   "tileWidth": 60,
   "tileHeight": 60,
