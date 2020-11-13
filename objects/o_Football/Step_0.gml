@@ -3,6 +3,15 @@
 // Calcuate angle based on ball position and tap position
 angle_between = point_direction(x,y,mouse_x,mouse_y);
 
+// Rotate the polygon
+if phy_speed_x > 0 || phy_speed_y > 0
+    {
+    phy_rotation += sqrt(sqr(phy_speed_x) + sqr(phy_speed_y)) /10;
+    }
+
+// Base the image angle on polygon rotation
+dir = -phy_rotation;
+
 // Build power level whilst tap is held
 if mouse_check_button(mb_any) {
 	
@@ -91,112 +100,23 @@ if (hit) {
 	}
 	
 	// Calculate power and trajectory
-	var _power = power_level*6;
-	var _hspeed = lengthdir_x(_power, trajectory);
-	var _vspeed = lengthdir_y(_power, trajectory);
+	var _power = power_level;
+	var trajectory = point_direction(mouse_x, mouse_y, x, y);
+    
+	//Reset current speed before impulse
+	phy_speed_x = 0; 
+	phy_speed_y = 0;
 	
-	// Appy power
-	hsp = _hspeed;
-	vsp = _vspeed;
+	//Apply physics impulse on the ball
+	physics_apply_impulse(x, y, lengthdir_x(_power,  trajectory), lengthdir_y(_power, trajectory));
 	
 	// Reset values
 	power_level = 1;
 	power_timer = 0;
 	
+	
 	hit = false;
 }
-
-//gravity = 0.2;
-
-//----------Bouncing off walls, friction, and gravity----------
-
-grounded = (place_meeting(x, y + 1, o_LevelPieceParent));
-
-if (!grounded) {
-	
-    vsp += grav;
-} 
-else {
-    
-	if (abs(0 - hsp) > 0.5) {
-		
-        hsp -= hsp / 10;
-	} 
-	else {
-		
-        hsp = 0;
-    }
-}
-
-//Horizontal collisions
-if (place_meeting(x + hsp, y, o_LevelPieceParent)) {
-	
-    while (!place_meeting(x + sign(hsp), y, o_LevelPieceParent)) {
-        x += sign(hsp);
-    }
-	var horizontal_speed = hsp / 200;
-	
-	if (hsp < 0) {
-		ball_collide_volume += horizontal_speed; 
-		if ball_collide_pitch > 0.8 {
-			ball_collide_pitch += horizontal_speed;
-		}
-	}
-	else {
-		ball_collide_volume -= horizontal_speed; 
-		if ball_collide_pitch > 0.8 {
-			ball_collide_pitch -= horizontal_speed;
-		}
-	}
-	
-	var football_hit = audio_play_sound(snd_FootballCollide, 1, false);
-	audio_sound_gain(football_hit, ball_collide_volume, 0);
-	audio_sound_pitch(football_hit, ball_collide_pitch);
-	
-	ball_collide_volume = 1;
-	ball_collide_pitch = 1;
-	hsp = -hsp / 2;
-	random_spin = random_range(0.6, 2.4);
-}
-//Horizontal movement
-x += hsp;
-
-//Vertical collisions
-if (place_meeting(x, y + vsp, o_LevelPieceParent)) {
-	
-    while (!place_meeting(x, y + sign(vsp), o_LevelPieceParent)) {
-        y += sign(vsp);
-    }
-	var vertical_speed = vsp / 200;
-	
-	if (vsp < 0) {
-		ball_collide_volume += vertical_speed; 
-		if ball_collide_pitch > 0.8 {
-			ball_collide_pitch += vertical_speed;
-		}
-	}
-	else {
-		ball_collide_volume -= vertical_speed; 
-		if ball_collide_pitch > 0.8 {
-			ball_collide_pitch -= vertical_speed;
-		}
-	}
-	
-	var football_hit = audio_play_sound(snd_FootballCollide, 1, false);
-	audio_sound_gain(football_hit, ball_collide_volume, 0);
-	audio_sound_pitch(football_hit, ball_collide_pitch);
-	
-	ball_collide_volume = 1;
-	ball_collide_pitch = 1;
-	vsp = -vsp / 1.5;
-	random_spin = random_range(0.6, 2.4);
-}
-//Vertical movement
-if (grounded) && (abs(0 - vsp) < 1) vsp = 0;
-y += vsp;
-
-//Rotating
-dir += -hsp * random_spin;
 
 //Control flash
 if (flash_alpha > 0) {

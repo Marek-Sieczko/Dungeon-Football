@@ -13,9 +13,9 @@
   },
   "physicsObject": false,
   "physicsSensor": false,
-  "physicsShape": 1,
+  "physicsShape": 2,
   "physicsGroup": 1,
-  "physicsDensity": 0.5,
+  "physicsDensity": 0.0,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
   "physicsAngularDamping": 0.1,
@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_WoodenPlatformLeft1","path":"objects/o_WoodenPlatformLeft1/o_WoodenPlatformLeft1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

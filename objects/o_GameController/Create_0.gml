@@ -3,13 +3,6 @@
 //Create selected ball
 instance_create_layer(room_width*0.5, room_height - global.View_Height*0.35, "User_Layer", global.BallSelected);
 
-//Create control buttons(debug)
-//instance_create_layer(x,y, "GUI_Layer", o_RightHitPanel);
-//instance_create_layer(x,y, "GUI_Layer", o_LeftHitPanel);
-
-//Create user controls
-//instance_create_layer(x, y, "Controllers", o_UserTapBox);
-
 //Set variables to record time
 milliseconds = 0;
 has_started = false;

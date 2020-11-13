@@ -10,8 +10,10 @@ _mouse_y = device_mouse_y_to_gui(0);
 // Check for win
 if current_keys == total_keys {
 	
+	show_debug_message("current_keys == total_keys")
 	with(o_ExitDoor) {
 		can_move = true;
+		show_debug_message("door open")
 	}
 	current_keys = 0;
 }
@@ -28,3 +30,6 @@ if (can_restart) {
 	alarm[1] = 180;
 	can_restart = false;
 }
+
+//show_debug_message("total keys: " + string(total_keys));
+//show_debug_message("current keys: " + string(current_keys));

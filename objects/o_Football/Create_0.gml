@@ -1,15 +1,10 @@
 ///Init
 
+can_play = true;
 power_applied = 1;
-hit_type = "";
 hit = false;
-hsp = 0;
-vsp = 0;
-grav = 0.5;
 dir = 0;
-grounded = 0;
 can_collide = true
-random_spin = random_range(0.6, 2.4);
 
 power_bar_pitch_modifier = 0.7;
 ball_hit_pitch_modifier = 1;
@@ -73,8 +68,6 @@ power_interval = 4;
 power_level = 1;
 
 can_animate_node_1 = false;
-can_animate_node_2 = false;
-node_animation_timer = 0;
 
 //Shader variables
 shadow_alpha = 0.3;

@@ -3,7 +3,7 @@
 if (flash_alpha > 0) {
 	
 	gpu_set_blendmode(bm_add);
-	shader_set(shd_flash); 
+	//shader_set(shd_flash); 
 	draw_sprite_ext(sprite_index, image_index, x, y, 1, 1, dir, c_white, flash_alpha);
 	draw_sprite_ext(s_FootballShadow, 0, x, y, 1, 1, 0, c_white, shadow_alpha);
 	shader_reset();
