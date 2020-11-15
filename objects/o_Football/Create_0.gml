@@ -76,3 +76,5 @@ flash_colour = c_white;
 trail_sprite = spr_trail_basic;
 
 alarm[0] = 1;
+alarm[2] = 1;
+alarm[3] = 1;

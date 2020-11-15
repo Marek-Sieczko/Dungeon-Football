@@ -1,5 +1,10 @@
 ///@description Ball Physics
 
+
+
+
+
+
 // Calcuate angle based on ball position and tap position
 angle_between = point_direction(x,y,mouse_x,mouse_y);
 
@@ -118,6 +123,9 @@ if (hit) {
 	hit = false;
 }
 
+x = phy_position_x;
+y = phy_position_y;
+
 //Control flash
 if (flash_alpha > 0) {
 	
@@ -125,3 +133,4 @@ if (flash_alpha > 0) {
 	flash_alpha -= 0.04;
 }
 else {shadow_alpha = 0.3;}
+

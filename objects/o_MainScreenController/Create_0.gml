@@ -9,10 +9,3 @@ can_create_options_screen = false;
 
 load_level_data();
 
-//Create a black screen at full opacity
-black_screen = instance_create_layer(x, y, "GUI_Layer", o_BlackBox);
-//Set black screen to fade out
-with (black_screen) {
-	
-	can_fade = true;
-}

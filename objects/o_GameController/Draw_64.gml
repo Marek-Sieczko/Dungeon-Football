@@ -101,50 +101,65 @@ if (key_3_collected) {
 	}
 }
 
-////Draw Timer
-if (can_time) {
-	
-	milliseconds += 100/60;
+if (HUD_can_fade) {
+		
+	key_1_alpha = ease_linear(key_animation_time_1, 1, -1, 120);
+	key_1_alpha = ease_linear(key_animation_time_1, 1, -1, 120);
+	key_animation_time_1++;
+		
+	if (key_animation_time_1 >= 120) {
+			
+		key_animation_time_1 = 0;
+		HUD_can_fade = false;
+	}
 }
 
-//Convert current millisecond count to MM:SS:MS
-var minutes_to_show = milliseconds div 6000;
-var seconds_to_show = milliseconds div 100 - (minutes_to_show * 60);
-var milliseconds_to_show = milliseconds mod 100;
-milliseconds_to_show = floor(milliseconds_to_show);
+//draw_clear_alpha(c_black, 0.4); 
 
-if minutes_to_show > 9 {var minutes_formatted = string(minutes_to_show);}
-else if minutes_to_show < 10 {var minutes_formatted = "0" + string(minutes_to_show);}
-if seconds_to_show > 9 {var seconds_formatted = ":" + string(seconds_to_show);}
-else if seconds_to_show < 10 {var seconds_formatted = ":0" + string(seconds_to_show);}
-if milliseconds_to_show > 9 {var milliseconds_formatted = ":" + string(milliseconds_to_show);}
-else if milliseconds_to_show < 10 {var milliseconds_formatted = ":0" + string(milliseconds_to_show);}
-
-//Draw current time
-draw_set_font(fnt_LuckiestGuy80);
-draw_set_halign(fa_left);
-draw_set_valign(fa_center);
-draw_text_ext_transformed_color(60, 60, string(minutes_formatted) + string(seconds_formatted) + (milliseconds_formatted), 0, global.View_Width, 1, 1, 0, c_white, c_white, c_white, c_white, 1);
-
-//Convert best time into MM:SS:MS
-var best_minutes_to_show = current_best_time div 6000;
-var best_seconds_to_show = current_best_time div 100 - (best_minutes_to_show * 60);
-var best_milliseconds_to_show = current_best_time mod 100;
-best_milliseconds_to_show = floor(best_milliseconds_to_show);
-
-if best_minutes_to_show > 9 {var best_minutes_formatted = string(best_minutes_to_show);}
-else if best_minutes_to_show < 10 {var best_minutes_formatted = "0" + string(best_minutes_to_show);}
-if best_seconds_to_show > 9 {var best_seconds_formatted = ":" + string(best_seconds_to_show);}
-else if best_seconds_to_show < 10 {var best_seconds_formatted = ":0" + string(best_seconds_to_show);}
-if best_milliseconds_to_show > 9 {var best_milliseconds_formatted = ":" + string(best_milliseconds_to_show);}
-else if best_milliseconds_to_show < 10 {var best_milliseconds_formatted = ":0" + string(best_milliseconds_to_show);}
-
-//Draw best time
-draw_set_font(fnt_LuckiestGuy50);
-draw_set_halign(fa_left);
-draw_set_valign(fa_center);
-
-if (current_best_time != 9999999) {
+//////Draw Timer
+//if (can_time) {
 	
-	draw_text_ext_transformed_color(60, 180, string(best_minutes_formatted) + string(best_seconds_formatted) + (best_milliseconds_formatted), 0, global.View_Width, 1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
-}
+//	milliseconds += 100/60;
+//}
+
+////Convert current millisecond count to MM:SS:MS
+//var minutes_to_show = milliseconds div 6000;
+//var seconds_to_show = milliseconds div 100 - (minutes_to_show * 60);
+//var milliseconds_to_show = milliseconds mod 100;
+//milliseconds_to_show = floor(milliseconds_to_show);
+
+//if minutes_to_show > 9 {var minutes_formatted = string(minutes_to_show);}
+//else if minutes_to_show < 10 {var minutes_formatted = "0" + string(minutes_to_show);}
+//if seconds_to_show > 9 {var seconds_formatted = ":" + string(seconds_to_show);}
+//else if seconds_to_show < 10 {var seconds_formatted = ":0" + string(seconds_to_show);}
+//if milliseconds_to_show > 9 {var milliseconds_formatted = ":" + string(milliseconds_to_show);}
+//else if milliseconds_to_show < 10 {var milliseconds_formatted = ":0" + string(milliseconds_to_show);}
+
+////Draw current time
+//draw_set_font(fnt_LuckiestGuy80);
+//draw_set_halign(fa_left);
+//draw_set_valign(fa_center);
+//draw_text_ext_transformed_color(60, 60, string(minutes_formatted) + string(seconds_formatted) + (milliseconds_formatted), 0, global.View_Width, 1, 1, 0, c_white, c_white, c_white, c_white, 1);
+
+////Convert best time into MM:SS:MS
+//var best_minutes_to_show = current_best_time div 6000;
+//var best_seconds_to_show = current_best_time div 100 - (best_minutes_to_show * 60);
+//var best_milliseconds_to_show = current_best_time mod 100;
+//best_milliseconds_to_show = floor(best_milliseconds_to_show);
+
+//if best_minutes_to_show > 9 {var best_minutes_formatted = string(best_minutes_to_show);}
+//else if best_minutes_to_show < 10 {var best_minutes_formatted = "0" + string(best_minutes_to_show);}
+//if best_seconds_to_show > 9 {var best_seconds_formatted = ":" + string(best_seconds_to_show);}
+//else if best_seconds_to_show < 10 {var best_seconds_formatted = ":0" + string(best_seconds_to_show);}
+//if best_milliseconds_to_show > 9 {var best_milliseconds_formatted = ":" + string(best_milliseconds_to_show);}
+//else if best_milliseconds_to_show < 10 {var best_milliseconds_formatted = ":0" + string(best_milliseconds_to_show);}
+
+////Draw best time
+//draw_set_font(fnt_LuckiestGuy50);
+//draw_set_halign(fa_left);
+//draw_set_valign(fa_center);
+
+//if (current_best_time != 9999999) {
+	
+//	draw_text_ext_transformed_color(60, 180, string(best_minutes_formatted) + string(best_seconds_formatted) + (best_milliseconds_formatted), 0, global.View_Width, 1, 1, 0, c_yellow, c_yellow, c_yellow, c_yellow, 1);
+//}

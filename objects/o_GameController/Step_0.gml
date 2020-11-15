@@ -10,7 +10,6 @@ _mouse_y = device_mouse_y_to_gui(0);
 // Check for win
 if current_keys == total_keys {
 	
-	show_debug_message("current_keys == total_keys")
 	with(o_ExitDoor) {
 		can_move = true;
 		show_debug_message("door open")
@@ -21,11 +20,13 @@ if current_keys == total_keys {
 // Restart game
 if (can_restart) {
 	
-	var black_screen = instance_create_layer(x, y, "GUI_Layer", o_BlackBox);
-	
-	with (black_screen) {can_fade_in = true;}
+	with(obj_light_ctrl) {
+		
+		Blackness_Value += 0.02;
+	}
 	
 	audio_play_sound(snd_StageComplete, 1, false);
+	instance_destroy(dungeon_dust);
 	
 	alarm[1] = 180;
 	can_restart = false;
