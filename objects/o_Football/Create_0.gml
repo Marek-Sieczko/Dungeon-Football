@@ -1,6 +1,5 @@
 ///Init
 
-can_play = true;
 power_applied = 1;
 hit = false;
 dir = 0;
@@ -75,6 +74,5 @@ flash_alpha = 0;
 flash_colour = c_white;
 trail_sprite = spr_trail_basic;
 
-alarm[0] = 1;
-alarm[2] = 1;
-alarm[3] = 1;
+Alarm[0] = 1;
+Alarm[1] = 1;

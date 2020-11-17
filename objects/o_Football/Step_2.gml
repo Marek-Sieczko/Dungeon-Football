@@ -1,6 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Make light track the ball
 	
-Light_X = x;
-Light_Y = y;
-
+light_x = x;
+light_y = y;

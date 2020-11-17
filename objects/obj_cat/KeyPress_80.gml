@@ -1,1 +1,0 @@
-fake_light_remove(id);

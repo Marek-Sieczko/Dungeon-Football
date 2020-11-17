@@ -1,10 +1,5 @@
 ///@description Ball Physics
 
-
-
-
-
-
 // Calcuate angle based on ball position and tap position
 angle_between = point_direction(x,y,mouse_x,mouse_y);
 

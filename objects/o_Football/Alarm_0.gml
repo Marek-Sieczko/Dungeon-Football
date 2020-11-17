@@ -1,4 +1,3 @@
-/// @description Create Trail
+/// @description Add light
 
-//This is where you define the trail information
-//trail = scr_create_trail(trail_sprite, 0, 20, 0.5, 0.5, true);
+fake_light_ini(id, s_LightCutout1, 3, 3, light_colour, 1);

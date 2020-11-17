@@ -12,7 +12,6 @@ if current_keys == total_keys {
 	
 	with(o_ExitDoor) {
 		can_move = true;
-		show_debug_message("door open")
 	}
 	current_keys = 0;
 }
@@ -22,7 +21,7 @@ if (can_restart) {
 	
 	with(obj_light_ctrl) {
 		
-		Blackness_Value += 0.02;
+		blackness_value += 0.02;
 	}
 	
 	audio_play_sound(snd_StageComplete, 1, false);
@@ -31,6 +30,3 @@ if (can_restart) {
 	alarm[1] = 180;
 	can_restart = false;
 }
-
-//show_debug_message("total keys: " + string(total_keys));
-//show_debug_message("current keys: " + string(current_keys));

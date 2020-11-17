@@ -23,7 +23,7 @@ if collision_circle(x, y, 20, o_BallParent, false, true) != noone
 
 	instance_create_layer(x, y, "Wall_Layer", o_key_collect);
 
-	o_GameController.current_coins++;
+	with (o_GameController) {current_coins++;}
 
 	fake_light_remove(static_light);
 	instance_destroy(particle_1);

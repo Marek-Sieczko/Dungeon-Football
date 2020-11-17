@@ -1,58 +1,51 @@
+///@description Draw light
+
+// Get view coordinates
 var vx = camera_get_view_x(view_camera[0]);
 var vy = camera_get_view_y(view_camera[0]);
 var vw = camera_get_view_width(view_camera[0]);
 var vh = camera_get_view_height(view_camera[0]);
 
-if(!surface_exists(Surf_Light))
-{
-Surf_Light = surface_create(vw, vh);
+// Create surface at vire coordinates
+if(!surface_exists(surface_light)) {
+	
+	surface_light = surface_create(vw, vh);
 }
 
-surface_set_target(Surf_Light);
+surface_set_target(surface_light);
 
-draw_clear_alpha(c_black, Blackness_Value); //The opacity of the darkness is set here.
+// Draw blackness to the screen (canvas to be punched through)
+draw_clear_alpha(c_black, blackness_value); //The opacity of the darkness is set here.
 
-//That part will loops through all objects listed on the list.
-var size = ds_list_size(Light_List);
+var size = ds_list_size(light_list);
 var x1, y1;
 var count = 0;
 var light;
-var flick = 0;
+//var flick = 0;
 
-repeat(size)
-{
-light = ds_list_find_value(Light_List, count);
+repeat(size) { // Check DS list as many times as there are lights in the room
+	
+	light = ds_list_find_value(light_list, count); // Place light IDs into a variable
 
-    with(light)
-    {
-        if(Light_Active == 1 && fake_light_is_on_view(view_camera[0], Light_Range))
-        {
-        x1 = Light_X-camera_get_view_x(view_camera[0]);
-        y1 = Light_Y-camera_get_view_y(view_camera[0]);
-        flick = choose(1, 1, 1, 1, 1, 1, Light_Flick); //You can add or remove some "1".
-        gpu_set_blendmode(bm_subtract); //Punch a gradient hole
-        draw_sprite_ext(Light_Sprite, 0, x1, y1, Light_Xscale*flick, Light_Yscale*flick, Light_Rotation, c_black, 1);
-        gpu_set_blendmode(bm_zero); //Add some color
-        draw_sprite_ext(Light_Sprite, 0, x1, y1, Light_Xscale*flick, Light_Yscale*flick, Light_Rotation, Light_Color, 0.5); //Crank the last argument to increase color opacity.
+    with(light) {
+
+		
+        if(light_active == 1 && fake_light_is_on_view(view_camera[0], light_range)) {
+			
+	        x1 = light_x-camera_get_view_x(view_camera[0]);
+	        y1 = light_y-camera_get_view_y(view_camera[0]);
+	       // flick = choose(1, 1, 1, 1, 1, 1, light_flick); //You can add or remove some "1".
+			
+	        gpu_set_blendmode(bm_subtract); //Punch a gradient hole
+	        draw_sprite_ext(light_sprite, 0, x1, y1, light_xscale, light_yscale, light_rotation, c_black, 1);
+	        gpu_set_blendmode(bm_zero); //Add some color
+	        draw_sprite_ext(light_sprite, 0, x1, y1, light_xscale, light_yscale, light_rotation, light_color, 0.5); //Crank the last argument to increase color opacity.
         }
-    }
-    
-count++;
+    } 
+	count++;
 }
 
 gpu_set_blendmode(bm_normal);//Return to normal.
 surface_reset_target();//Always reset target!
 
-draw_surface_ext(Surf_Light, vx, vy, 1, 1, 0, c_white, Blackness_Value);
-
-
-////Debug
-//draw_set_color(c_white);
-//draw_set_valign(fa_top);
-//draw_set_halign(fa_left);
-
-//draw_text(vx+2, vy+2, "FPS:"+string(fps));
-//draw_text(vx+2, vy+18, "FPS_REAL:"+string(fps_real));
-//draw_text(vx+2, vy+34, "R:restart");
-//draw_text(vx+2, vy+50, "Space: on/off red lights");
-//draw_text(vx+2, vy+66, "'P': removes cat's light ,\r'O': adds the cat's light.");
+draw_surface_ext(surface_light, vx, vy, 1, 1, 0, c_white, blackness_value);

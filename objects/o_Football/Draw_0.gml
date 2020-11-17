@@ -1,5 +1,7 @@
 /// @description Draw power bar
 
+draw_self();
+
 if mouse_check_button(mb_any) {
 	
 	start_x1 = x + lengthdir_x(node_1_length, angle_between); start_y1 = y + lengthdir_y(node_1_length, angle_between);

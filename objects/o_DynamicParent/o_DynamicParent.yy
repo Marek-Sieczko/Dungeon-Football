@@ -18,9 +18,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"o_DynamicParent","path":"objects/o_DynamicParent/o_DynamicParent.yy",},"parent":{"name":"o_DynamicParent","path":"objects/o_DynamicParent/o_DynamicParent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"o_StaticParent","path":"objects/o_StaticParent/o_StaticParent.yy",},"parent":{"name":"o_DynamicParent","path":"objects/o_DynamicParent/o_DynamicParent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":7,"collisionObjectId":null,"parent":{"name":"o_DynamicParent","path":"objects/o_DynamicParent/o_DynamicParent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"o_DynamicParent","path":"objects/o_DynamicParent/o_DynamicParent.yy",},"parent":{"name":"o_DynamicParent","path":"objects/o_DynamicParent/o_DynamicParent.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

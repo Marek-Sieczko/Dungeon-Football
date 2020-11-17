@@ -1,6 +1,7 @@
 /// @description Set up game
 
 //Create selected ball
+
 instance_create_layer(room_width*0.5, room_height - global.View_Height*0.35, "User_Layer", global.BallSelected);
 
 var cam_x = camera_get_view_x(view_camera[0]);
@@ -65,5 +66,3 @@ can_animate_key_6 = false;
 key_animation_time_1 = 0;
 
 can_restart = false;
-
-
