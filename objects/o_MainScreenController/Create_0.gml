@@ -8,3 +8,4 @@ can_create_store_screen = false;
 can_create_options_screen = false;
 
 load_level_data();
+

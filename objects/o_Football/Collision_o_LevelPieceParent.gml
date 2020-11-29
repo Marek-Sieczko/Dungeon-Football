@@ -1,20 +1,17 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Actions on collision
 
-//ball_collide_volume += phy_speed/5; 
-
-//if ball_collide_pitch > 0.8 {
-//	ball_collide_pitch += phy_speed;
-//}
-
-//if (phy_speed > 0.1) {
+if phy_speed > 4 {
 	
-//	var football_hit = audio_play_sound(snd_FootballCollide, 1, false);
-//}
-//audio_sound_gain(football_hit, ball_collide_volume, 0);
-//audio_sound_pitch(football_hit, ball_collide_pitch);
+	var ball_dust_1 = instance_create_layer(phy_collision_x, phy_collision_y, "Wall_Layer", o_BallCollisionDust);
 	
-//ball_collide_volume = 1;
-//ball_collide_pitch = 1;
+	ball_direction = -point_direction(0, 0, phy_speed_x, phy_speed_y);
+	
+	with(ball_dust_1) {
+	
+		particle_amount = other.phy_speed/10;
+		particle_min_direction = other.ball_direction-45;	
+		particle_max_direction = other.ball_direction+45;	
+	}
 
+}
 

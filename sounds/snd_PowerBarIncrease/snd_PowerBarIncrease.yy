@@ -13,8 +13,8 @@
   "soundFile": "snd_PowerBarIncrease.ogg",
   "duration": 0.283639,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_PowerBarIncrease",

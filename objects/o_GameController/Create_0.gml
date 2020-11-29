@@ -1,14 +1,16 @@
 /// @description Set up game
 
 //Create selected ball
-
 instance_create_layer(room_width*0.5, room_height - global.View_Height*0.35, "User_Layer", global.BallSelected);
+
+//Start ambient sound
+//audio_play_sound(snd_DungeonMusic1, 1, true);
 
 var cam_x = camera_get_view_x(view_camera[0]);
 var cam_y = camera_get_view_y(view_camera[0]);
 
 dungeon_dust = instance_create_layer(cam_x, cam_y, "Wall_Layer", o_DungeonDust1);
-HUD_can_fade = false;
+dungeon_fog = instance_create_layer(cam_x, cam_y, "Wall_Layer", o_DungeonFog1);
 
 //Set variables to record time
 milliseconds = 0;
@@ -32,7 +34,6 @@ selected_struct = "";
 next_level_selected_struct = "";
 
 //Key variables
-
 key_1_collected = false;
 key_1_x = global.View_Width*0.5 - 100;
 key_1_y = global.View_Height*0.06;
@@ -66,3 +67,4 @@ can_animate_key_6 = false;
 key_animation_time_1 = 0;
 
 can_restart = false;
+HUD_can_fade = false;

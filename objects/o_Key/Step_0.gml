@@ -1,5 +1,7 @@
 /// @description Actions
 
+decrease_delta_alarm();
+
 //Animation when hovering
 if (hover_animation_1) {
 	
@@ -15,7 +17,7 @@ particle_timer++;
 
 if (particle_timer mod 10 == 0) {
 	
-	particle_1 = instance_create_layer(x, y, "Wall_Layer", o_key_hovering_sparkle);
+	particle_1 = instance_create_layer(x, y, "Wall_Layer", o_KeyHoveringSparkle);
 }
 
 
@@ -23,7 +25,7 @@ if collision_circle(x, y, 20, o_BallParent, false, true) != noone
 {
     audio_play_sound(snd_CoinCollected, 1, false);
 
-	instance_create_layer(x, y, "Wall_Layer", o_key_collect);
+	instance_create_layer(x, y, "Wall_Layer", o_KeyCollect);
 
 	switch (o_GameController.current_keys) {
 	
@@ -32,7 +34,7 @@ if collision_circle(x, y, 20, o_BallParent, false, true) != noone
 		case 2: with(o_GameController) {key_3_collected = true; can_animate_key_5 = true; current_keys++;} break;
 	}
 
-	fake_light_remove(static_light);
+	//fake_light_remove(static_light);
 	instance_destroy(particle_1);
 	instance_destroy();
 }

@@ -1,5 +1,8 @@
 ///Init
 
+
+hit_play = true;
+
 power_applied = 1;
 hit = false;
 dir = 0;
@@ -74,5 +77,5 @@ flash_alpha = 0;
 flash_colour = c_white;
 trail_sprite = spr_trail_basic;
 
-Alarm[0] = 1;
-Alarm[1] = 1;
+alarm[0] = 1; //Make light
+

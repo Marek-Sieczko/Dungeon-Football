@@ -13,8 +13,8 @@
   "soundFile": "snd_StageComplete.wav",
   "duration": 1.005,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_StageComplete",

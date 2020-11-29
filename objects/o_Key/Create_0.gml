@@ -14,6 +14,9 @@ animation_time_1 = 0;
 
 //Create paricle effect
 particle_timer = 0;
-particle_1 = instance_create_layer(x, y, "Wall_Layer", o_key_hovering_sparkle);
+particle_1 = instance_create_layer(x, y, "Wall_Layer", o_KeyHoveringSparkle);
 
-alarm[0] = 1;
+Alarm[0] = 1;
+
+light_colour = make_color_rgb(250,250,0);
+light_radius = 600;

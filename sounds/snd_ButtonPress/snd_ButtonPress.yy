@@ -13,8 +13,8 @@
   "soundFile": "snd_ButtonPress.wav",
   "duration": 0.055272,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_ButtonPress",

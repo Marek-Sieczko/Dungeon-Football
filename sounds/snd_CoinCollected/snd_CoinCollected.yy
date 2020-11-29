@@ -13,8 +13,8 @@
   "soundFile": "snd_CoinCollected.wav",
   "duration": 1.737154,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_CoinCollected",

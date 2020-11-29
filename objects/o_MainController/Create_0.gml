@@ -1,6 +1,7 @@
 /// @description Set up data
 
 randomize();
+create_delta_alarm();
 	
 global.CoinAmount = 0;
 global.BallSelected = o_Football;

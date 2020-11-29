@@ -25,7 +25,6 @@
     {"isDnD":false,"eventNum":76,"eventType":9,"collisionObjectId":null,"parent":{"name":"o_DebugController","path":"objects/o_DebugController/o_DebugController.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":68,"eventType":9,"collisionObjectId":null,"parent":{"name":"o_DebugController","path":"objects/o_DebugController/o_DebugController.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":80,"eventType":9,"collisionObjectId":null,"parent":{"name":"o_DebugController","path":"objects/o_DebugController/o_DebugController.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"o_DebugController","path":"objects/o_DebugController/o_DebugController.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

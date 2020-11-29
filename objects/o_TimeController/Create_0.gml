@@ -1,9 +1,16 @@
-/// @description Setup
+/// @description 
+//game_set_speed(10, gamespeed_fps);
 
-global.DeltaFactor = 1;
-#macro delta global.DeltaFactor
-#macro ALARMINACTIVE -100
+//global.delta_factor = 1;
+//#macro delta global.delta_factor
 
-for (var i = 0; i < 12; ++i) {
-    Alarm[i] = ALARMINACTIVE;
-}
+////alarms
+//#macro ALARMINACTIVE -100
+
+//for(var i=0; i<12; i++){
+//	Alarm[i] = ALARMINACTIVE;
+//}
+
+////Test
+//second = 0;
+//Alarm[0] = 60;

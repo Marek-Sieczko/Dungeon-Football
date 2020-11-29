@@ -13,8 +13,8 @@
   "soundFile": "snd_MissHit.mp3",
   "duration": 0.318469,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_MissHit",

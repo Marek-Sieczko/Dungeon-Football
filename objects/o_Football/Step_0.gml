@@ -6,16 +6,16 @@ angle_between = point_direction(x,y,mouse_x,mouse_y);
 // Rotate the polygon
 if phy_speed_x > 0 || phy_speed_y > 0
     {
-    phy_rotation += sqrt(sqr(phy_speed_x) + sqr(phy_speed_y)) /10;
+    phy_rotation += (sqrt(sqr(phy_speed_x) + sqr(phy_speed_y)) /10) * delta;
     }
 
-// Base the image angle on polygon rotation
+// Base the image angle on physics rotation
 dir = -phy_rotation;
 
 // Build power level whilst tap is held
 if mouse_check_button(mb_any) {
 	
-	power_timer++;
+	power_timer += 1;
 	
 	if (power_timer == power_interval) { // Increase power level
 		
@@ -24,10 +24,10 @@ if mouse_check_button(mb_any) {
 			var increase_power_sound = audio_play_sound(snd_PowerBarIncrease, 1, false);
 			audio_sound_pitch(increase_power_sound, power_bar_pitch_modifier);
 			
-			power_bar_pitch_modifier += 0.1;
-			ball_hit_pitch_modifier -= 0.03;
-			ball_hit_volume += 0.05;
-			power_level += 1;
+			power_bar_pitch_modifier += 0.1 * delta;
+			ball_hit_pitch_modifier -= 0.03 * delta;
+			ball_hit_volume += 0.05 * delta;
+			power_level += 1 * delta;
 		}
 		
 		// Set node alphas to 1 based on increasing power level
@@ -100,7 +100,7 @@ if (hit) {
 	}
 	
 	// Calculate power and trajectory
-	var _power = power_level;
+	var _power = power_level*0.6;
 	var trajectory = point_direction(mouse_x, mouse_y, x, y);
     
 	//Reset current speed before impulse
@@ -109,23 +109,20 @@ if (hit) {
 	
 	//Apply physics impulse on the ball
 	physics_apply_impulse(x, y, lengthdir_x(_power,  trajectory), lengthdir_y(_power, trajectory));
-	
+
 	// Reset values
 	power_level = 1;
 	power_timer = 0;
 	
-	
 	hit = false;
 }
 
-x = phy_position_x;
-y = phy_position_y;
-
 //Control flash
 if (flash_alpha > 0) {
-	
-	//shadow_alpha += 0.01
-	flash_alpha -= 0.04;
-}
-else {shadow_alpha = 0.3;}
 
+	flash_alpha -= 0.04 * delta;
+}
+else {
+	
+	shadow_alpha = 0.3;
+}

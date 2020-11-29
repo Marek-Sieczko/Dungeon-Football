@@ -10,6 +10,8 @@ _mouse_y = device_mouse_y_to_gui(0);
 // Check for win
 if current_keys == total_keys {
 	
+	audio_play_sound(snd_DoorOpen, 1, false);
+	
 	with(o_ExitDoor) {
 		can_move = true;
 	}
@@ -21,12 +23,18 @@ if (can_restart) {
 	
 	with(obj_light_ctrl) {
 		
-		blackness_value += 0.02;
+		Blackness_Value += 0.02;
 	}
 	
 	audio_play_sound(snd_StageComplete, 1, false);
 	instance_destroy(dungeon_dust);
+	instance_destroy(dungeon_fog);
 	
 	alarm[1] = 180;
 	can_restart = false;
 }
+
+var offset_y;
+offset_y[0] = 500;
+
+layer_y("Background", (camera_get_view_y(view_camera[0])*0.5)+offset_y[0]);

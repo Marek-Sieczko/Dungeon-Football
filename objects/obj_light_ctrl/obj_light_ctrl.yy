@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Lighting",
+    "path": "folders/Objects/Lighting.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_light_ctrl",

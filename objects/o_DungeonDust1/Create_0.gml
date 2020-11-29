@@ -31,4 +31,3 @@ part_emitter_region(ps, global.pe_Effect1, xp-room_width, xp+room_width, yp-room
 part_emitter_stream(ps, global.pe_Effect1, global.pt_Effect1, 2);
 
 //Destroying Emitters
-//part_emitter_destroy(ps, global.pe_Effect1);

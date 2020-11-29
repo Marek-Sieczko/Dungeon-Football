@@ -1,14 +1,10 @@
 /// @description Detect tap of the screen
-application_surface_enable(false)
+
 //Draw Keys
 draw_sprite_ext(s_GoldenKey, 0, key_1_x, key_1_y, key_1_xscale, key_1_yscale, key_1_angle, c_white, key_1_alpha);
 draw_sprite_ext(s_GoldenKey, 0, key_2_x, key_2_y, key_2_xscale, key_2_yscale, key_2_angle, c_white, key_2_alpha);
 draw_sprite_ext(s_GoldenKey, 0, key_3_x, key_3_y, key_3_xscale, key_3_yscale, key_3_angle, c_white, key_3_alpha);
 
-draw_set_halign(fa_left)
-draw_set_color(c_white)
-draw_text(50, 80, "fps real: " + string(fps_real))
-draw_text(50, 160, "fps: " + string(fps))
 //Animate first key
 if (key_1_collected) {
 	
@@ -105,6 +101,7 @@ if (key_3_collected) {
 	}
 }
 
+//Animate HUD fade
 if (HUD_can_fade) {
 		
 	key_1_alpha = ease_linear(key_animation_time_1, 1, -1, 120);
@@ -118,9 +115,7 @@ if (HUD_can_fade) {
 	}
 }
 
-//draw_clear_alpha(c_black, 0.4); 
-
-//////Draw Timer
+////Draw Timer
 //if (can_time) {
 	
 //	milliseconds += 100/60;
