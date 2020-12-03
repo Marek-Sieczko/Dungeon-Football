@@ -1,7 +1,7 @@
 /// @description Draw and animate coin/coin text
 
 //Set variables for text
-draw_set_font(fnt_LuckiestGuy100);
+draw_set_font(fnt_Futura100);
 draw_set_halign(fa_left);
 draw_set_valign(fa_center);
 

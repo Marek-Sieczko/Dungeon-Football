@@ -6,7 +6,7 @@ if !(has_collided) {
 	with (o_GameController) {
 	
 		can_time = false;
-		can_restart = true;
+		stage_completed = true;
 	}
 	instance_destroy(o_BallParent);
 	has_collided = true;

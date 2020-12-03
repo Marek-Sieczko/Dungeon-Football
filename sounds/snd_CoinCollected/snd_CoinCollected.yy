@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.44,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_CoinCollected.wav",
-  "duration": 1.737154,
+  "duration": 0.811521,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",

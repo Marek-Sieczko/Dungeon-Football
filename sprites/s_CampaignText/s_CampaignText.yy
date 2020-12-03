@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Main Screen",
-    "path": "folders/Sprites/Screens/Main Screen.yy",
+    "path": "folders/Sprites/HUD/Main Screen.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_CampaignText",

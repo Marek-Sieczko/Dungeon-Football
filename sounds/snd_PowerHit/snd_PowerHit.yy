@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_PowerHit.wav",
-  "duration": 0.192143,
+  "duration": 1.700057,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",

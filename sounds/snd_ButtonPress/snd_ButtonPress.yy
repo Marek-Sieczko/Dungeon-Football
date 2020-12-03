@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_ButtonPress.wav",
-  "duration": 0.055272,
+  "duration": 1.005,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",

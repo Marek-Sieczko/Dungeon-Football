@@ -21,5 +21,3 @@ window_set_size(global.View_Width, global.View_Height); //Finally, set the windo
 
 var _xcenter = (room_width - global.View_Width)/2;
 camera_set_view_pos(view_camera[0], _xcenter, 0);
-
-show_debug_message("display controller created");

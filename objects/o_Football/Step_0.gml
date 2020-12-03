@@ -1,5 +1,37 @@
 ///@description Ball Physics
 
+if (can_activate) {
+	
+	can_activate_timer++;
+	
+	if (can_activate_timer >= 4) {
+		
+		var vx = camera_get_view_x(view_camera[0]);
+		var vy = camera_get_view_y(view_camera[0]);
+		var vw = camera_get_view_width(view_camera[0]);
+		var vh = camera_get_view_height(view_camera[0]);
+		
+		instance_activate_region(vx-500, vy-500, vw+1000, vh+1000, true);
+		
+		
+		can_activate_timer = 0;
+	}
+}
+
+// Ball intro
+if (ball_intro_active) {
+	
+	image_alpha += 0.02;
+
+	
+	if (image_alpha >= 1) {
+
+		//o_GameController.can_activate_free_cam = true;
+		camera_set_view_target(view_camera[0], o_BallParent);
+		ball_intro_active = false;
+	}
+}
+
 // Calcuate angle based on ball position and tap position
 angle_between = point_direction(x,y,mouse_x,mouse_y);
 
@@ -42,6 +74,12 @@ if mouse_check_button(mb_any) {
 			case 9: node_9_image_alpha = 1; break;
 			case 10: node_10_image_alpha = 1; break;
 		}
+		
+		if (power_level == 10) {
+			
+			miss_hit_variance += 0.1
+			miss_hit_variance = clamp(miss_hit_variance, 0, 5);
+		}
 		power_timer = 0;
 	}
 }
@@ -74,43 +112,45 @@ if (hit) {
 	audio_sound_pitch(ball_impact_sound, ball_hit_pitch_modifier);
 	audio_sound_gain(ball_impact_sound, ball_hit_volume, 0);
 	
-	ball_hit_pitch_modifier = 1; // Reset pitch modifier after use
-	
-	// Get a random angle for use if player over hits
-	var trajectory = angle_between-180;
-	var angle_variance = irandom_range(-30, 30);
-	
-	if power_level == 10 { // Actions for overhit
-		
-		audio_play_sound(snd_MissHit, 1, false);
-		
-		//shadow_alpha = 0;
-		//flash_colour = c_red;
-		//flash_alpha = 1;
-		power_level -= 6; 
-		trajectory += angle_variance;
-	}
-	if power_level == 9 { // Actions for perfect hit
-		
-		shadow_alpha = 0;
-		power_level += 1;
-		flash_colour = c_yellow;
-		flash_alpha = 1;
-		audio_play_sound(snd_PowerHit, 1, false);
-	}
-	
 	// Calculate power and trajectory
-	var _power = power_level*0.6;
 	var trajectory = point_direction(mouse_x, mouse_y, x, y);
     
 	//Reset current speed before impulse
 	phy_speed_x = 0; 
 	phy_speed_y = 0;
 	
-	//Apply physics impulse on the ball
-	physics_apply_impulse(x, y, lengthdir_x(_power,  trajectory), lengthdir_y(_power, trajectory));
+	if power_level == 10 { // Actions for overhit
+		
+		power_level -= 8; 
+		
+		var _power = power_level*0.6;
+		var angle_variance_1 = irandom_range(-30, -20);
+		var angle_variance_2 = irandom_range(20, 30);
+		var angle_variance_selector = choose(angle_variance_1, angle_variance_2);
+		trajectory = (trajectory + angle_variance_selector);
+
+		physics_apply_impulse(x + (angle_variance_selector), y + (angle_variance_selector), lengthdir_x(_power, trajectory), lengthdir_y(_power, trajectory));
+		audio_play_sound(snd_MissHit, 1, false);
+	}
+	if power_level == 9 { // Actions for perfect hit
+		
+		power_hit = true;
+		power_level += 1;
+		flash_alpha = 2;
+		
+		var _power = power_level*0.6;
+		
+		physics_apply_impulse(x, y, lengthdir_x(_power,  trajectory), lengthdir_y(_power, trajectory));
+	}
+	else {
+		
+		var _power = power_level*0.6;
+		physics_apply_impulse(x, y, lengthdir_x(_power,  trajectory), lengthdir_y(_power, trajectory));
+	}
 
 	// Reset values
+	ball_hit_pitch_modifier = 1;
+	ball_hit_volume = 1;
 	power_level = 1;
 	power_timer = 0;
 	
@@ -124,5 +164,8 @@ if (flash_alpha > 0) {
 }
 else {
 	
-	shadow_alpha = 0.3;
+	if (flash_colour == c_yellow) {
+		
+		flash_colour = c_white;
+	}
 }

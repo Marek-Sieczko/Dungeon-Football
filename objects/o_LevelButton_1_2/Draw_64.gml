@@ -28,7 +28,7 @@ if (_mouse_x >= x1) && (_mouse_x <= x2) && (_mouse_y >= y1) && (_mouse_y <= y2) 
 		
 		audio_play_sound(snd_ButtonPress, 1, false);
 		
-		global.LevelSelected = 2;
+		global.StageSelected = 2;
 		with (o_StartButton) {selected_room = rm_Level_2;}
 		
 		o_CampaignPanel.bronze_time_attained = o_LevelData.campaign_data.level_2.bronze_time_attained;

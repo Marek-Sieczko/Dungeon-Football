@@ -2,7 +2,7 @@
 ///@param target
 function fake_light_remove(argument0) {
 
-	with(obj_light_ctrl)
+	with(o_LightController)
 	{
 	var pos = ds_list_find_index(light_list, argument0);//id don't remove itself if not on the list.
 

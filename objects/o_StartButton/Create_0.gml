@@ -21,6 +21,6 @@ intro_animation_time_1 = 0;
 intro_animation_2 = false;
 intro_animation_time_2 = 0;
 
-selected_room = global.LevelSelected;
+selected_room = global.StageSelected;
 
 //alarm[0] = 30; //Start animation

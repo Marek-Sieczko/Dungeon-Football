@@ -2,7 +2,7 @@
 
 decrease_delta_alarm();
 
-//Animation when hovering
+// Animation when hovering
 if (hover_animation_1) {
 	
 	x = ease_inout_sine(animation_time_1, current_x_position, -6, 105);
@@ -12,21 +12,34 @@ if (hover_animation_1) {
 	animation_time_1++;
 }
 
-//Create a particle every 10 frames
+// Spawn a particle whilst hovering every 10 frames
 particle_timer++;
-
-if (particle_timer mod 10 == 0) {
+if (particle_timer == 10) {
 	
-	particle_1 = instance_create_layer(x, y, "Wall_Layer", o_KeyHoveringSparkle);
+	global.pe_KeySparkle = part_emitter_create(global.ParticleSystem);
+	var xp, yp;
+	xp = x;
+	yp = y;
+	part_emitter_region(global.ParticleSystem, global.pe_KeySparkle, xp-50, xp+50, yp-50, yp+50, ps_shape_ellipse, ps_distr_gaussian);
+	part_emitter_burst(global.ParticleSystem, global.pe_KeySparkle, global.pt_KeySparkle, 1);
+	particle_timer = 0;
 }
 
+// Actions on the ball collecting the key
+if collision_circle(x, y, 20, o_BallParent, false, true) != noone {
+    
+	audio_play_sound(snd_PickupCollision, 1, false);
+	audio_play_sound(snd_KeyCollect, 1, false);
 
-if collision_circle(x, y, 20, o_BallParent, false, true) != noone
-{
-    audio_play_sound(snd_CoinCollected, 1, false);
+	// Create new particle
+	global.pe_KeyCollect = part_emitter_create(global.ParticleSystem);
+	var xp, yp;
+	xp = x;
+	yp = y;
+	part_emitter_region(global.ParticleSystem, global.pe_KeyCollect, xp-50, xp+50, yp-50, yp+50, ps_shape_ellipse, ps_distr_gaussian);
+	part_emitter_burst(global.ParticleSystem, global.pe_KeyCollect, global.pt_KeyCollect, 40);
 
-	instance_create_layer(x, y, "Wall_Layer", o_KeyCollect);
-
+	// Update amount of keys collected in the game controller
 	switch (o_GameController.current_keys) {
 	
 		case 0: with(o_GameController) {key_1_collected = true; can_animate_key_1 = true; current_keys++;} break;
@@ -34,7 +47,8 @@ if collision_circle(x, y, 20, o_BallParent, false, true) != noone
 		case 2: with(o_GameController) {key_3_collected = true; can_animate_key_5 = true; current_keys++;} break;
 	}
 
-	//fake_light_remove(static_light);
-	instance_destroy(particle_1);
+	// Make the ball flash on pickup collection
+	with(o_BallParent) {flash_alpha = 1;}
+
 	instance_destroy();
 }

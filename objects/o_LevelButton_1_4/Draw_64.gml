@@ -28,7 +28,7 @@ if (_mouse_x >= x1) && (_mouse_x <= x2) && (_mouse_y >= y1) && (_mouse_y <= y2) 
 		
 		audio_play_sound(snd_ButtonPress, 1, false);
 
-		global.LevelSelected = 4;
+		global.StageSelected = 4;
 		
 		o_CampaignPanel.bronze_time_attained = o_LevelData.campaign_data.level_4.bronze_time_attained;
 		o_CampaignPanel.bronze_time_to_show = o_LevelData.campaign_data.level_4.bronze_time;

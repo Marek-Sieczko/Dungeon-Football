@@ -1,7 +1,7 @@
 /// @description Draw text
 
 //Set text properties for stage text
-draw_set_font(fnt_LuckiestGuy64);
+draw_set_font(fnt_Futura64);
 draw_set_halign(fa_center);
 draw_set_valign(fa_center);
 
@@ -15,10 +15,10 @@ else {tween_gold_trophy_alpha = 1;}
 
 
 //Draw the stage text
-draw_text_ext_transformed_color(tween_stage_number_x, tween_stage_number_y, "Stage " + string(global.LevelSelected), 0, global.View_Width, 1, 1, 0, c_white, c_white, c_white, c_white, 1);
+draw_text_ext_transformed_color(tween_stage_number_x, tween_stage_number_y, "Stage " + string(global.StageSelected), 0, global.View_Width, 1, 1, 0, c_white, c_white, c_white, c_white, 1);
 
 //Set text properties for stage times
-draw_set_font(fnt_LuckiestGuy50);
+draw_set_font(fnt_Futura64);
 draw_set_halign(fa_left);
 
 //Convert bronze time to MM/SS

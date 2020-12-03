@@ -27,4 +27,12 @@ if !(next_level_lock_state) {
 }
 
 save_level_data();
+
+with(all) {
+	
+	instance_destroy();
+}
+
+instance_destroy();
+
 room_goto(rm_Main_Menu);

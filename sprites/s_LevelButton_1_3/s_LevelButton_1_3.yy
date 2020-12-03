@@ -73,7 +73,7 @@
   ],
   "parent": {
     "name": "Campaign Screen",
-    "path": "folders/Sprites/Screens/Campaign Screen.yy",
+    "path": "folders/Sprites/HUD/Campaign Screen.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_LevelButton_1_3",

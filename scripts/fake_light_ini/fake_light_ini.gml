@@ -21,11 +21,11 @@ function fake_light_ini(argument0, argument1, argument2, argument3, argument4, a
 	Light_Rotation = 0;//Rotate the Light's sprite.
 	}
 
-	with(obj_light_ctrl)
+	with(o_LightController)
 	{
-		if(ds_list_find_index(Light_List, argument0) == -1)//id don't add itself if already on the list.
+		if(ds_list_find_index(light_list, argument0) == -1)//id don't add itself if already on the list.
 		{
-		ds_list_add(Light_List, argument0);
+		ds_list_add(light_list, argument0);
 		}
 	}
 

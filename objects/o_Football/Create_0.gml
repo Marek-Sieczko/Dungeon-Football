@@ -1,20 +1,41 @@
-///Init
+///@description Setup
 
+can_click = true;
 
-hit_play = true;
+// Set ball to invisible on startup
+image_alpha = 0;
+ball_intro_active = true;
+light_xscale = 3;
+light_yscale = 3;
 
+//Power and collision variables
 power_applied = 1;
 hit = false;
 dir = 0;
-can_collide = true
+power_timer = 0;
+power_interval = 4;
+power_level = 1;
+can_collide = true;
+miss_hit_variance = 1;
+power_hit = false;
+trail_timer = 0;
+trail_timer_duration = 60;
 
+//Variables to activate instances
+can_activate = true;
+can_activate_timer = 0;
+
+//Flash variables
+flash_colour = c_white;
+flash_alpha = 1;
+
+//Sound variables
+hit_play = true;
 power_bar_pitch_modifier = 0.7;
 ball_hit_pitch_modifier = 1;
 ball_hit_volume = 1;
-ball_collide_volume = 1;
-ball_collide_pitch = 1;
 
-//Node variables
+//Power node variables
 node_1_image_xscale = 1;
 node_1_image_yscale = 1;
 node_1_image_alpha = 1;
@@ -65,17 +86,6 @@ node_10_image_yscale = 1;
 node_10_image_alpha = 0.2;
 node_10_length = 240;
 
-power_timer = 0;
-power_interval = 4;
-power_level = 1;
-
 can_animate_node_1 = false;
 
-//Shader variables
-shadow_alpha = 0.3;
-flash_alpha = 0;
-flash_colour = c_white;
-trail_sprite = spr_trail_basic;
-
 alarm[0] = 1; //Make light
-

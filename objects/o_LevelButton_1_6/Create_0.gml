@@ -2,7 +2,7 @@
 
 //Level to be loaded into global variable on user select
 //selected_level = 6;
-//global.LevelSelected = selected_level;
+//global.StageSelected = selected_level;
 
 //Take start position
 current_y_position = room_height - global.View_Height*0.3;
