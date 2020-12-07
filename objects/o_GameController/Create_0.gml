@@ -1,7 +1,15 @@
+///@description Setup
 
+// Activate intro screen instances
+var vx = camera_get_view_x(view_camera[0]);
+var vy = camera_get_view_y(view_camera[0]);
+var vw = camera_get_view_width(view_camera[0]);
+var vh = camera_get_view_height(view_camera[0]);
+		
+instance_activate_region(vx-500, vy-500, vw+1000, vh+1000, true);
 
-// Check for finishing the stage
-stage_completed = false;
+// Check for stage completion
+has_completed = false;
 
 // Start spawning fog and dust
 can_spawn_particles = true;
@@ -16,26 +24,34 @@ ball_y_spawn = room_height - 700;
 
 // Animation trigger variables
 intro_is_running = true;
-intro_animation_1 = false;
-intro_animation_2 = false;
-intro_animation_3 = false;
-intro_animation_4 = false;
-intro_animation_timer_1 = 0;
-intro_animation_timer_2 = 0;
-intro_animation_timer_3 = 0;
-intro_animation_timer_4 = 0;
-intro_animation_duration_1 = 60;
-intro_animation_duration_2 = 60;
-intro_animation_duration_3 = 40;
-intro_animation_duration_4 = 40;
 
 can_delay_animation_1 = true;
 intro_animation_1_delay_timer = 0;
 intro_animation_1_duration = 60;
 
+intro_animation_1 = false;
+intro_animation_timer_1 = 0;
+intro_animation_duration_1 = 60;
+
+intro_animation_2 = false;
+intro_animation_timer_2 = 0;
+intro_animation_duration_2 = 60;
+
+intro_animation_3 = false;
+intro_animation_timer_3 = 0;
+intro_animation_duration_3 = 40;
+
 can_delay_animation_4 = false;
 intro_animation_4_delay_timer = 0;
 intro_animation_4_duration = 40;
+
+intro_animation_4 = false;
+intro_animation_timer_4 = 0;
+intro_animation_duration_4 = 40;
+
+outro_animation_1 = false;
+outro_animation_1_timer = 0;
+outro_animation_1_duration = 60;
 
 // Stage title/objective variables
 stage_title_number = global.StageSelected;
@@ -53,11 +69,12 @@ stage_objective_alpha = 0;
 // Black screen control
 can_fade_out = true;
 can_fade_in = false;
+can_draw_blackbox = false;
 blackbox_alpha = 1;
 blackbox_xscale = room_width;
 blackbox_yscale = room_height;
 fade_in_amount = 1;
-fade_out_amount = -1
+fade_out_amount = -1;
 fade_animation_time = 0;
 fade_animation_duration = 90;
 
@@ -118,7 +135,9 @@ current_bronze_time_attained = 0;
 current_silver_time_attained = 0;
 current_gold_time_attained = 0;
 current_best_time = 0;
+first_time_completed = false;
 next_level_lock_state = 0;
+level_xp = 0;
 total_keys = 0;
 total_coins = 0;
 current_keys = 0;

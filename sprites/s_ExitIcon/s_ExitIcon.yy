@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 185,
+  "bbox_right": 217,
   "bbox_top": 0,
-  "bbox_bottom": 185,
+  "bbox_bottom": 217,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 186,
-  "height": 186,
+  "width": 218,
+  "height": 218,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b588b93d-9f98-4c22-8046-b4c7bb9aa2c5","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b588b93d-9f98-4c22-8046-b4c7bb9aa2c5","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},"LayerId":{"name":"72e1fc28-0332-4170-8e45-c446b43d85f1","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ExitIcon","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},"resourceVersion":"1.0","name":"b588b93d-9f98-4c22-8046-b4c7bb9aa2c5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0f870478-d7d0-49fc-bc3e-c521025cf591","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0f870478-d7d0-49fc-bc3e-c521025cf591","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},"LayerId":{"name":"d34c9fad-1652-4860-b640-42cdc5914fb2","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_ExitIcon","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},"resourceVersion":"1.0","name":"0f870478-d7d0-49fc-bc3e-c521025cf591","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_ExitIcon","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b4435dc3-d734-4e68-924b-1da8716bd303","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b588b93d-9f98-4c22-8046-b4c7bb9aa2c5","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3caf05a5-8a10-4482-b1fb-cb13e6958bad","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0f870478-d7d0-49fc-bc3e-c521025cf591","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 93,
-    "yorigin": 93,
+    "xorigin": 109,
+    "yorigin": 109,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_ExitIcon","path":"sprites/s_ExitIcon/s_ExitIcon.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"72e1fc28-0332-4170-8e45-c446b43d85f1","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d34c9fad-1652-4860-b640-42cdc5914fb2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Game Screen",

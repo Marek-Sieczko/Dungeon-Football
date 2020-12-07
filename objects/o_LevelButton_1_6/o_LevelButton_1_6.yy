@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Campaign Screen",
-    "path": "folders/Objects/Screens/Campaign Screen.yy",
+    "path": "folders/Objects/HUD/Campaign Screen.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_LevelButton_1_6",

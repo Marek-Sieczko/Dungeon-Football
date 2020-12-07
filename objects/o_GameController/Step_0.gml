@@ -45,16 +45,17 @@ if (current_keys == total_keys) {
 	current_keys = 0;
 }
 
-// Check for stage win
-if (stage_completed) {
+// Actions for stage completion
+if (has_completed) {
 	
-	fade_in_amount = 0.8;
-	can_fade_in = true;
+	can_time = false;
+	can_pause = false;
 	
-	audio_play_sound(snd_StageComplete, 1, false);
+	outro_animation_1 = true;
 	
-	//alarm[1] = 180;
-	stage_completed = false;
+	instance_create_layer(global.View_Width*0.5, global.View_Height*0.5, "Top_GUI_Layer", o_StageCompleteController);
+	
+	has_completed = false;
 }
 
 // Start streaming fog and dust particles

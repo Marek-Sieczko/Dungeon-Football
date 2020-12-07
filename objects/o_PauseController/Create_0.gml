@@ -54,7 +54,7 @@ restart_button_pressed_animation_2 = false;
 restart_button_pressed_animation_duration = 8;
 restart_button_pressed_animation_timer = 0;
 restart_text_x = global.View_Width*0.5;
-restart_text_y = global.View_Height*0.5 + 200;
+restart_text_y = global.View_Height*0.5 + 210;
 restart_text_alpha = 0;
 
 resume_button_x = global.View_Width*0.7;
@@ -67,5 +67,5 @@ resume_button_pressed_animation_2 = false;
 resume_button_pressed_animation_duration = 8;
 resume_button_pressed_animation_timer = 0;
 resume_text_x = global.View_Width*0.7;
-resume_text_y = global.View_Height*0.5 + 200;
+resume_text_y = global.View_Height*0.5 + 210;
 resume_text_alpha = 0;

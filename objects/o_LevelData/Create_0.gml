@@ -13,7 +13,8 @@ campaign_data = {
 		best_time : 9999999,
 		level_rank : 1,
 		total_keys : 3,
-		total_coins : 5
+		total_coins : 5,
+		level_xp : 7
 	},
 	level_2 : {//Level 2 data
 		level_unlocked : false,
@@ -26,7 +27,8 @@ campaign_data = {
 		best_time : 9999999,
 		level_rank : 1,
 		total_keys : 3,
-		total_coins : 5
+		total_coins : 5,
+		level_xp : 7
 	},
 	level_3 : {//Level 3 data
 		level_unlocked : false,
@@ -39,7 +41,8 @@ campaign_data = {
 		best_time : 9999999,
 		level_rank : 1,
 		total_keys : 3,
-		total_coins : 5
+		total_coins : 5,
+		level_xp : 7
 	},
 	level_4 : {//Level 4 data
 		level_unlocked : false,
@@ -52,7 +55,8 @@ campaign_data = {
 		best_time : 9999999,
 		level_rank : 1,
 		total_keys : 3,
-		total_coins : 5
+		total_coins : 5,
+		level_xp : 7
 	},
 	level_5 : {//Level 5 data
 		level_unlocked : false,
@@ -65,7 +69,8 @@ campaign_data = {
 		best_time : 9999999,
 		level_rank : 1,
 		total_keys : 3,
-		total_coins : 5
+		total_coins : 5,
+		level_xp : 7
 	},
 	level_6 : {//Level 6 data
 		level_unlocked : false,
@@ -78,7 +83,8 @@ campaign_data = {
 		best_time : 9999999,
 		level_rank : 1,
 		total_keys : 3,
-		total_coins : 5
+		total_coins : 5,
+		level_xp : 7
 	},
 };
 

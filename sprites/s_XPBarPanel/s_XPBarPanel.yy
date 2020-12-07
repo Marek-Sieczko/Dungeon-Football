@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 397,
+  "bbox_right": 364,
   "bbox_top": 0,
-  "bbox_bottom": 95,
+  "bbox_bottom": 97,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 398,
-  "height": 96,
+  "width": 365,
+  "height": 98,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9d54a3d1-8860-4290-9479-c7698d6e3e2f","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9d54a3d1-8860-4290-9479-c7698d6e3e2f","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},"LayerId":{"name":"3bafd654-f021-4ea1-9a52-81b99213907a","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_XPBarPanel","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},"resourceVersion":"1.0","name":"9d54a3d1-8860-4290-9479-c7698d6e3e2f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"19d33c84-12ce-40c1-9997-2f6672e5ff27","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"19d33c84-12ce-40c1-9997-2f6672e5ff27","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},"LayerId":{"name":"072e39cd-5e5e-4346-b9ca-c00733f5b40d","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_XPBarPanel","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},"resourceVersion":"1.0","name":"19d33c84-12ce-40c1-9997-2f6672e5ff27","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_XPBarPanel","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"dd7fcbfb-a481-4694-b477-e50b27ffe4e4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9d54a3d1-8860-4290-9479-c7698d6e3e2f","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"97d08075-8765-409e-8707-8c6e319b4daa","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"19d33c84-12ce-40c1-9997-2f6672e5ff27","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 199,
-    "yorigin": 43,
+    "xorigin": 27,
+    "yorigin": 41,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_XPBarPanel","path":"sprites/s_XPBarPanel/s_XPBarPanel.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3bafd654-f021-4ea1-9a52-81b99213907a","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"072e39cd-5e5e-4346-b9ca-c00733f5b40d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Main Screen",

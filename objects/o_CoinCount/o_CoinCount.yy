@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Main Menu",
-    "path": "folders/Objects/Screens/Main Menu.yy",
+    "path": "folders/Objects/HUD/Main Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_CoinCount",

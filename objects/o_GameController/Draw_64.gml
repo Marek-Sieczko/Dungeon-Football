@@ -10,20 +10,10 @@ draw_set_font(fnt_Futura64);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
+// Draw coin
+draw_sprite_ext(s_Coin, 0, HUD_coin_x, HUD_coin_y, HUD_coin_xscale, HUD_coin_yscale, 0, c_white, HUD_coin_alpha);
+
 // Draw coin amount
-if (HUD_coin_amount_flash_alpha > 0) {
-	
-	//shader_set(shd_flash);
-	draw_sprite_ext(s_Coin, 0, HUD_coin_x, HUD_coin_y, HUD_coin_xscale, HUD_coin_yscale, 0, c_white, HUD_coin_alpha);
-	//draw_sprite_ext(s_Coin, 0, HUD_coin_x, HUD_coin_y, HUD_coin_xscale, HUD_coin_yscale, 0, HUD_coin_flash_colour, HUD_coin_amount_flash_alpha);
-	
-	//shader_reset();
-}
-else {
-
-	draw_sprite_ext(s_Coin, 0, HUD_coin_x, HUD_coin_y, HUD_coin_xscale, HUD_coin_yscale, 0, c_white, HUD_coin_alpha);
-}
-
 draw_text_ext_transformed_color(HUD_coin_amount_x, HUD_coin_amount_y, current_coins, 0, global.View_Width, HUD_coin_amount_xscale, HUD_coin_amount_yscale, 0, c_white, c_white, c_white, c_white, HUD_coin_amount_alpha);
 
 // Draw Keys
@@ -85,8 +75,10 @@ if (intro_is_running) {
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_center);
 		
+		var objective_to_draw = global.stage_objective_sprite;
+		
 		draw_text_ext_transformed_color(stage_title_x, stage_title_y, "STAGE " + string(stage_title_number), 0, global.View_Width, stage_title_xscale, stage_title_yscale, 0, c_white, c_white, c_white, c_white, stage_title_alpha);
-		draw_sprite_ext(s_CollectAllKeysText, 0, stage_objective_x, stage_objective_y, stage_objective_xscale, stage_objective_yscale, 0, c_white, stage_objective_alpha);
+		draw_sprite_ext(objective_to_draw, 0, stage_objective_x, stage_objective_y, stage_objective_xscale, stage_objective_yscale, 0, c_white, stage_objective_alpha);
 	}
 
 	// Control animation 1 delay
@@ -135,7 +127,7 @@ if (intro_is_running) {
 
 		HUD_coin_y = ease_out_sine(intro_animation_timer_3, -100, 210, intro_animation_duration_3);
 		HUD_coin_alpha = ease_out_sine(intro_animation_timer_3, 0, 1, intro_animation_duration_3);
-		HUD_coin_amount_y = ease_out_sine(intro_animation_timer_3, -135, 210, intro_animation_duration_3);
+		HUD_coin_amount_y = ease_out_sine(intro_animation_timer_3, -136, 210, intro_animation_duration_3);
 		HUD_coin_amount_alpha = ease_out_sine(intro_animation_timer_3, 0, 1, intro_animation_duration_3);
 		key_1_y = ease_out_sine(intro_animation_timer_3, -100, 215, intro_animation_duration_3);
 		key_2_y = ease_out_sine(intro_animation_timer_3, -100, 215, intro_animation_duration_3);
@@ -186,6 +178,31 @@ if (intro_is_running) {
 			instance_create_layer(ball_x_spawn, ball_y_spawn, "User_Layer", chosen_ball);
 			intro_is_running = false;
 		}
+	}
+}
+
+// Sequence of animations for the outro
+if (outro_animation_1) {
+	
+	HUD_coin_y = ease_out_sine(outro_animation_1_timer, 110, -210, outro_animation_1_duration);
+	HUD_coin_alpha = ease_out_sine(outro_animation_1_timer, 1, -1, outro_animation_1_duration);
+	HUD_coin_amount_y = ease_out_sine(outro_animation_1_timer, 74, -210, outro_animation_1_duration);
+	HUD_coin_amount_alpha = ease_out_sine(outro_animation_1_timer, 1, -1, outro_animation_1_duration);
+	key_1_y = ease_out_sine(outro_animation_1_timer, 115, -215, outro_animation_1_duration);
+	key_2_y = ease_out_sine(outro_animation_1_timer, 115, -215, outro_animation_1_duration);
+	key_3_y = ease_out_sine(outro_animation_1_timer, 115, -215, outro_animation_1_duration);
+	key_1_alpha = ease_out_sine(outro_animation_1_timer, 1, -1, outro_animation_1_duration);
+	key_2_alpha = ease_out_sine(outro_animation_1_timer, 1, -1, outro_animation_1_duration);
+	key_3_alpha = ease_out_sine(outro_animation_1_timer, 1, -1, outro_animation_1_duration);
+	pause_button_y = ease_out_sine(outro_animation_1_timer, 120, -220, outro_animation_1_duration);
+	pause_button_alpha = ease_out_sine(outro_animation_1_timer, 1, -1, outro_animation_1_duration);
+	
+	outro_animation_1_timer++;
+
+	if (outro_animation_1_timer >= intro_animation_duration_3) {
+		
+		outro_animation_1_timer = 0;
+		outro_animation_1 = false;
 	}
 }
 
@@ -364,20 +381,17 @@ if (pause_button_animation_2) {
 	}
 }
 
-// Draw black box to the screen
-if (can_fade_out) || (can_fade_in) {
-	
-	draw_sprite_ext(s_BlackBox, 0, 0, 0, blackbox_xscale, blackbox_yscale, 0, c_white, blackbox_alpha);
-}
-
 // Black box fade out animation
 if (can_fade_out) {
+	
+	can_draw_blackbox = true;
 	
 	blackbox_alpha = ease_out_sine(fade_animation_time, 1, fade_out_amount, fade_animation_duration);
 	fade_animation_time++;
 	
 	if (fade_animation_time >= fade_animation_duration) {
 		
+		can_draw_blackbox = false;
 		fade_animation_time = 0;
 		can_fade_out = false;
 	}
@@ -386,14 +400,45 @@ if (can_fade_out) {
 // Black box fade in animation
 if (can_fade_in) {
 	
-	blackbox_alpha = ease_out_sine(fade_animation_time, 0, 0.8, fade_animation_duration);
+	can_draw_blackbox = true;
+	
+	blackbox_alpha = ease_out_sine(fade_animation_time, 0, 0.6, fade_animation_duration);
 	fade_animation_time++;
 
 	if (fade_animation_time == fade_animation_duration) {
+		
+		blackbox_alpha = 0.6;
 		fade_animation_time = 0;
 		can_fade_in = false;
 	}
 }
+
+// Draw black box to the screen
+if (can_draw_blackbox) {
+	
+	draw_sprite_ext(s_BlackBox, 0, 0, 0, blackbox_xscale, blackbox_yscale, 0, c_white, blackbox_alpha);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////Draw Timer
 //if (can_time) {

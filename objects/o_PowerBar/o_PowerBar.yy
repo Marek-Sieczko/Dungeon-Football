@@ -25,7 +25,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Power Bars",
-    "path": "folders/Objects/Power Bars.yy",
+    "path": "folders/Objects/HUD/Game Screen/Power Bars.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_PowerBar",

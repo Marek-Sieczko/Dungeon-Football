@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 56,
+  "bbox_right": 74,
   "bbox_top": 0,
-  "bbox_bottom": 22,
+  "bbox_bottom": 30,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 57,
-  "height": 23,
+  "width": 75,
+  "height": 31,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"dc569a79-db58-4b8e-9b6d-4bf703b4f2aa","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dc569a79-db58-4b8e-9b6d-4bf703b4f2aa","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},"LayerId":{"name":"797e4fd9-08d7-459f-9f80-4fd6f48d4ab3","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ExitIconText","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},"resourceVersion":"1.0","name":"dc569a79-db58-4b8e-9b6d-4bf703b4f2aa","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b3f4bb80-43c6-445f-8ead-58e4bd0b2c2a","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b3f4bb80-43c6-445f-8ead-58e4bd0b2c2a","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},"LayerId":{"name":"4202b502-a27e-42f5-a8f5-a342cfa515c0","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_ExitIconText","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},"resourceVersion":"1.0","name":"b3f4bb80-43c6-445f-8ead-58e4bd0b2c2a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_ExitIconText","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"759e80ac-eeff-4e60-8886-12c02bcef220","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dc569a79-db58-4b8e-9b6d-4bf703b4f2aa","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"16ec779d-9665-43fa-ba4d-7c0da5c14309","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b3f4bb80-43c6-445f-8ead-58e4bd0b2c2a","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 28,
-    "yorigin": 11,
+    "xorigin": 37,
+    "yorigin": 15,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_ExitIconText","path":"sprites/s_ExitIconText/s_ExitIconText.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"797e4fd9-08d7-459f-9f80-4fd6f48d4ab3","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4202b502-a27e-42f5-a8f5-a342cfa515c0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Game Screen",

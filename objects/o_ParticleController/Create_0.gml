@@ -102,8 +102,7 @@ part_type_speed(global.pt_TorchSpark, 0.01, 0.02, 0, 0);
 part_type_direction(global.pt_TorchSpark, 0, 360, 0, 0);
 part_type_gravity(global.pt_TorchSpark, 0.01, 90);
 
-part_system_depth(global.ParticleSystem, 300);
-
+//Power hit
 global.pt_PowerHit = part_type_create();
 part_type_shape(global.pt_PowerHit, pt_shape_flare);
 part_type_size(global.pt_PowerHit, 0.2, 1.2, 0, 0);
@@ -116,3 +115,35 @@ part_type_life(global.pt_PowerHit, 20, 60);
 part_type_speed(global.pt_PowerHit, 0, 0, -0.30, 0);
 part_type_direction(global.pt_PowerHit, 0, 360, 0, 0);
 part_type_gravity(global.pt_PowerHit, 0, 0);
+
+//Create particle system
+global.ParticleSystem2 = part_system_create();
+part_system_depth(global.ParticleSystem2, -5000);
+
+global.pt_Confetti = part_type_create();
+part_type_shape(global.pt_Confetti, pt_shape_pixel);
+part_type_size(global.pt_Confetti, 1, 4, 0, 1);
+part_type_scale(global.pt_Confetti, 1, 1);
+part_type_orientation(global.pt_Confetti, 0, 0, 0, 0, 0);
+part_type_color3(global.pt_Confetti, 16056298, 16774801, 16252697);
+part_type_alpha3(global.pt_Confetti, 1, 0.49, 0);
+part_type_blend(global.pt_Confetti, 1);
+part_type_life(global.pt_Confetti, 20, 100);
+part_type_speed(global.pt_Confetti, 1, 5, 0, 0);
+part_type_direction(global.pt_Confetti, 0, 360, 0, 0);
+part_type_gravity(global.pt_Confetti, 0, 0);
+
+//Flare
+global.pt_Flare = part_type_create();
+part_type_shape(global.pt_Flare, pt_shape_flare);
+part_type_size(global.pt_Flare, 0.20, 0.30, 0, 0);
+part_type_scale(global.pt_Flare, 1, 1);
+part_type_orientation(global.pt_Flare, 0, 0, 0, 0, 0);
+part_type_color3(global.pt_Flare, 16765431, 16745718, 16727535);
+part_type_alpha3(global.pt_Flare, 1, 0.49, 0);
+part_type_blend(global.pt_Flare, 1);
+part_type_life(global.pt_Flare, 20, 100);
+part_type_speed(global.pt_Flare, 1, 5, 0, 0);
+part_type_direction(global.pt_Flare, 0, 360, 0, 0);
+part_type_gravity(global.pt_Flare, 0, 0);
+

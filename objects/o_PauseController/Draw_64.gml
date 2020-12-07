@@ -51,6 +51,7 @@ if (_mouse_x >= resume_x1) && (_mouse_x <= resume_x2) && (_mouse_y >= resume_y1)
 
 	if mouse_check_button_pressed(mb_any){
 		
+		//instance_activate_object(o_LightController);
 		audio_play_sound(snd_ButtonPress, 1, false);
 		resume_button_pressed_animation_1 = true;
 		resume_outro_animation_1 = true;
@@ -77,7 +78,7 @@ draw_set_halign(fa_center);
 draw_set_color(c_white);
 draw_text_color(pause_text_x, pause_text_y, "PAUSED", c_white, c_white, c_white, c_white, pause_text_alpha);
 
-draw_set_font(fnt_Futura40);
+draw_set_font(fnt_Futura32);
 draw_text_color(exit_text_x, exit_text_y, "EXIT", c_white, c_white, c_white, c_white, exit_text_alpha);
 draw_text_color(restart_text_x, restart_text_y, "RESTART", c_white, c_white, c_white, c_white, restart_text_alpha);
 draw_text_color(resume_text_x, resume_text_y, "RESUME", c_white, c_white, c_white, c_white, resume_text_alpha);
@@ -108,15 +109,15 @@ if (pause_intro_animation_2) {
 	pause_text_alpha = ease_linear(pause_intro_animation_2_timer, 0, 1, pause_intro_animation_2_duration);
 	exit_button_y = ease_inout_sine(pause_intro_animation_2_timer, global.View_Height*0.5 + 100, -50, pause_intro_animation_2_duration);
 	exit_button_alpha = ease_linear(pause_intro_animation_2_timer, 0, 1, pause_intro_animation_2_duration);
-	exit_text_y = ease_inout_sine(pause_intro_animation_2_timer, global.View_Height*0.5 + 200, -50, pause_intro_animation_2_duration);
+	exit_text_y = ease_inout_sine(pause_intro_animation_2_timer, global.View_Height*0.5 + 210, -50, pause_intro_animation_2_duration);
 	exit_text_alpha = ease_linear(pause_intro_animation_2_timer, 0, 1, pause_intro_animation_2_duration);
 	restart_button_y = ease_inout_sine(pause_intro_animation_2_timer, global.View_Height*0.5 + 100, -50, pause_intro_animation_2_duration);
 	restart_button_alpha = ease_linear(pause_intro_animation_2_timer, 0, 1, pause_intro_animation_2_duration);
-	restart_text_y = ease_inout_sine(pause_intro_animation_2_timer, global.View_Height*0.5 + 200, -50, pause_intro_animation_2_duration);
+	restart_text_y = ease_inout_sine(pause_intro_animation_2_timer, global.View_Height*0.5 + 210, -50, pause_intro_animation_2_duration);
 	restart_text_alpha = ease_linear(pause_intro_animation_2_timer, 0, 1, pause_intro_animation_2_duration);
 	resume_button_y = ease_inout_sine(pause_intro_animation_2_timer, global.View_Height*0.5 + 100, -50, pause_intro_animation_2_duration);
 	resume_button_alpha = ease_linear(pause_intro_animation_2_timer, 0, 1, pause_intro_animation_2_duration);
-	resume_text_y = ease_inout_sine(pause_intro_animation_2_timer, global.View_Height*0.5 + 200, -50, pause_intro_animation_2_duration);
+	resume_text_y = ease_inout_sine(pause_intro_animation_2_timer, global.View_Height*0.5 + 210, -50, pause_intro_animation_2_duration);
 	resume_text_alpha = ease_linear(pause_intro_animation_2_timer, 0, 1, pause_intro_animation_2_duration);
 	pause_intro_animation_2_timer++;
 	
@@ -212,6 +213,8 @@ if (resume_button_pressed_animation_2) {
 if (exit_outro_animation_1) {
 
 	black_box_alpha = ease_linear(exit_outro_animation_timer, 0.5, 0.5, exit_outro_animation_duration);
+	restart_button_alpha = ease_in_sine(exit_outro_animation_timer, 1, -1, exit_outro_animation_duration);
+	resume_button_alpha = ease_in_sine(exit_outro_animation_timer, 1, -1, exit_outro_animation_duration);
 	exit_outro_animation_timer++;
 	
 	if (exit_outro_animation_timer >= exit_outro_animation_duration) {
@@ -227,10 +230,11 @@ if (exit_outro_animation_1) {
 if (restart_outro_animation_1) {
 
 	black_box_alpha = ease_linear(restart_outro_animation_timer, 0.5, 0.5, restart_outro_animation_duration);
+	exit_button_alpha = ease_in_sine(exit_outro_animation_timer, 1, -1, exit_outro_animation_duration);
+	resume_button_alpha = ease_in_sine(exit_outro_animation_timer, 1, -1, exit_outro_animation_duration);
 	restart_outro_animation_timer++;
 	
 	if (restart_outro_animation_timer >= restart_outro_animation_duration) {
-		
 		can_return_to_game = true;
 		restart_outro_animation_1 = false;
 		restart_outro_animation_timer = 0;
@@ -240,15 +244,15 @@ if (restart_outro_animation_1) {
 
 // Animation to resume the game
 if (resume_outro_animation_1) {
-
+	
 	black_box_alpha = ease_linear(resume_outro_animation_timer, 0.5, -0.5, resume_outro_animation_duration);
-	pause_text_alpha = ease_linear(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
-	exit_button_alpha = ease_linear(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
-	exit_text_alpha = ease_linear(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
-	restart_button_alpha = ease_linear(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
-	restart_text_alpha = ease_linear(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
-	resume_button_alpha = ease_linear(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
-	resume_text_alpha = ease_linear(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
+	pause_text_alpha = ease_in_sine(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
+	exit_button_alpha = ease_in_sine(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
+	exit_text_alpha = ease_in_sine(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
+	restart_button_alpha = ease_in_sine(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
+	restart_text_alpha = ease_in_sine(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
+	resume_button_alpha = ease_in_quint(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
+	resume_text_alpha = ease_in_quint(resume_outro_animation_timer, 1, -1, resume_outro_animation_duration);
 	resume_outro_animation_timer++;
 	
 	if (resume_outro_animation_timer >= resume_outro_animation_duration) {

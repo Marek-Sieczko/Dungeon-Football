@@ -16,6 +16,7 @@ with (o_GameController) {
 	next_level_lock_state = o_LevelData.campaign_data.level_2.level_unlocked;
 	total_keys = o_LevelData.campaign_data.level_1.total_keys;
 	total_coins = o_LevelData.campaign_data.level_1.total_coins;
+	level_xp = o_LevelData.campaign_data.level_1.level_xp;
 	
 	selected_struct = o_LevelData.campaign_data.level_1;
 	next_level_selected_struct = o_LevelData.campaign_data.level_2;
