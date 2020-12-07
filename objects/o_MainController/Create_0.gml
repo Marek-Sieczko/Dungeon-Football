@@ -7,5 +7,5 @@ global.CoinAmount = 0;
 global.PlayerRank = 1;
 global.BallSelected = o_Football;
 global.StageSelected = 1;
-global.PlayedBefore = false;
+global.PlayedBefore = true;
 
