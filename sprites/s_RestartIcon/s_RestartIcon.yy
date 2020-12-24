@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"942372ee-edfc-440e-b4ce-1750cea253c8","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"942372ee-edfc-440e-b4ce-1750cea253c8","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},"LayerId":{"name":"c631d5f6-d4c8-4eab-8cac-15852a22cd0f","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_RestartIcon","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},"resourceVersion":"1.0","name":"942372ee-edfc-440e-b4ce-1750cea253c8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"84a082ec-853b-4b9c-9469-9ca07db72d6d","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"84a082ec-853b-4b9c-9469-9ca07db72d6d","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},"LayerId":{"name":"7642d0bf-3461-400f-adfa-95b28f8c2151","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_RestartIcon","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},"resourceVersion":"1.0","name":"84a082ec-853b-4b9c-9469-9ca07db72d6d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_RestartIcon","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"5d71ca3f-c66b-4282-a254-ab4bc5df58f2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"942372ee-edfc-440e-b4ce-1750cea253c8","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6c49db7c-2298-443b-83b2-c2aad78fb353","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84a082ec-853b-4b9c-9469-9ca07db72d6d","path":"sprites/s_RestartIcon/s_RestartIcon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c631d5f6-d4c8-4eab-8cac-15852a22cd0f","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7642d0bf-3461-400f-adfa-95b28f8c2151","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Game Screen",

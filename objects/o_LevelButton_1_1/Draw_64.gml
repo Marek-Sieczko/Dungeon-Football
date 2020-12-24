@@ -23,14 +23,14 @@ if (_mouse_x >= x1) && (_mouse_x <= x2) && (_mouse_y >= y1) && (_mouse_y <= y2) 
 		//global.StageSelected = 1;
 		with (o_StartButton) {selected_room = rm_Level_1;}
 
-		o_CampaignPanel.bronze_time_attained = o_LevelData.campaign_data.level_1.bronze_time_attained;
-		o_CampaignPanel.bronze_time_to_show = o_LevelData.campaign_data.level_1.bronze_time;
-		o_CampaignPanel.silver_time_attained = o_LevelData.campaign_data.level_1.silver_time_attained;
-		o_CampaignPanel.silver_time_to_show = o_LevelData.campaign_data.level_1.silver_time;
-		o_CampaignPanel.gold_time_attained = o_LevelData.campaign_data.level_1.gold_time_attained;
-		o_CampaignPanel.gold_time_to_show = o_LevelData.campaign_data.level_1.gold_time;
-		o_CampaignPanel.best_time_to_show = o_LevelData.campaign_data.level_1.best_time;
-		o_CampaignPanel.level_rank_to_show = o_LevelData.campaign_data.level_1.level_rank;
+		//o_CampaignPanel.bronze_time_attained = o_LevelData.campaign_data.level_1.bronze_time_attained;
+		//o_CampaignPanel.bronze_time_to_show = o_LevelData.campaign_data.level_1.bronze_time;
+		//o_CampaignPanel.silver_time_attained = o_LevelData.campaign_data.level_1.silver_time_attained;
+		//o_CampaignPanel.silver_time_to_show = o_LevelData.campaign_data.level_1.silver_time;
+		//o_CampaignPanel.gold_time_attained = o_LevelData.campaign_data.level_1.gold_time_attained;
+		//o_CampaignPanel.gold_time_to_show = o_LevelData.campaign_data.level_1.gold_time;
+		//o_CampaignPanel.best_time_to_show = o_LevelData.campaign_data.level_1.best_time;
+		//o_CampaignPanel.level_rank_to_show = o_LevelData.campaign_data.level_1.level_rank;
 
 		selected_animation_1 = true; 
 		
@@ -96,22 +96,22 @@ else {
 }
 
 //Get current stage completion data
-var bronze_completion = o_LevelData.campaign_data.level_1.bronze_time_attained;
-var silver_completion = o_LevelData.campaign_data.level_1.silver_time_attained;
-var gold_completion = o_LevelData.campaign_data.level_1.gold_time_attained;
+//var bronze_completion = o_LevelData.campaign_data.level_1.bronze_time_attained;
+//var silver_completion = o_LevelData.campaign_data.level_1.silver_time_attained;
+//var gold_completion = o_LevelData.campaign_data.level_1.gold_time_attained;
 
-//Show trophy based on highest trophy earned
-if (gold_completion) {
+////Show trophy based on highest trophy earned
+//if (gold_completion) {
 	
-	draw_sprite_ext(s_TrophyGold, 0, tween_x+88, tween_y-74, 1, 1, 0, c_white, tween_alpha);
-	exit;
-}
-else if (silver_completion) {
+//	draw_sprite_ext(s_TrophyGold, 0, tween_x+88, tween_y-74, 1, 1, 0, c_white, tween_alpha);
+//	exit;
+//}
+//else if (silver_completion) {
 	
-	draw_sprite_ext(s_TrophySilver, 0, tween_x+88, tween_y-74, 1, 1, 0, c_white, tween_alpha);
-	exit;
-}
-else if (bronze_completion) {
+//	draw_sprite_ext(s_TrophySilver, 0, tween_x+88, tween_y-74, 1, 1, 0, c_white, tween_alpha);
+//	exit;
+//}
+//else if (bronze_completion) {
 	
-	draw_sprite_ext(s_TrophyBronze, 0, tween_x+88, tween_y-74, 1, 1, 0, c_white, tween_alpha);
-}
+//	draw_sprite_ext(s_TrophyBronze, 0, tween_x+88, tween_y-74, 1, 1, 0, c_white, tween_alpha);
+//}

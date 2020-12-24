@@ -48,16 +48,13 @@ if (_mouse_x >= x1) && (_mouse_x <= x2) && (_mouse_y >= y1) && (_mouse_y <= y2) 
 		
 		instance_create_layer(x, y, "GUI_Layer", o_PauseController);
 		
-		//part_type_clear(global.pt_Fog);
-		part_emitter_clear(global.ParticleSystem,global.pe_Fog)
-		part_particles_clear(global.pt_Fog);
+		part_particles_clear(global.pe_Fog);
+		part_emitter_clear(global.ParticleSystem, global.pe_Fog);
 		
-		//part_type_(global.pt_FloatingDust);
-		part_emitter_clear(global.ParticleSystem,global.pe_FloatingDust)
-		part_particles_clear(global.pt_FloatingDust);
+		part_particles_clear(global.pe_FloatingDust);
+		part_emitter_clear(global.ParticleSystem, global.pe_FloatingDust);
 		
 		instance_deactivate_all(false);
-		
 		instance_activate_object(o_PauseController);
 
 		has_paused = true;

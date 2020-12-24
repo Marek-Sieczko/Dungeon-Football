@@ -8,6 +8,19 @@ var vh = camera_get_view_height(view_camera[0]);
 		
 instance_activate_region(vx-500, vy-500, vw+1000, vh+1000, true);
 
+//Current data from saved data
+
+level_completed = false;
+next_level_lock_state = 0;
+level_xp = 0;
+total_keys = 0;
+total_coins = 0;
+current_keys = 0;
+current_gems = 0;
+current_coins = 0;
+selected_struct = "";
+next_level_selected_struct = "";
+
 // Check for stage completion
 has_completed = false;
 
@@ -18,7 +31,7 @@ can_spawn_particles = true;
 can_draw_intro_text = true;
 
 //Ball variables
-chosen_ball = o_Football;
+chosen_ball = global.BallSelected;
 ball_x_spawn = room_width * 0.5;
 ball_y_spawn = room_height - 700;
 
@@ -126,24 +139,6 @@ pause_menu_animation_timer = 0;
 milliseconds = 0;
 has_started = false;
 can_time = false;
-
-//Current data from saved data
-current_bronze_time = 0;
-current_silver_time = 0;
-current_gold_time = 0;
-current_bronze_time_attained = 0;
-current_silver_time_attained = 0;
-current_gold_time_attained = 0;
-current_best_time = 0;
-first_time_completed = false;
-next_level_lock_state = 0;
-level_xp = 0;
-total_keys = 0;
-total_coins = 0;
-current_keys = 0;
-current_coins = 0;
-selected_struct = "";
-next_level_selected_struct = "";
 
 // Bloom control variables
 bloom_handler = shader_get_uniform(shd_bloom, "intensity");

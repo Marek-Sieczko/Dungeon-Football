@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 190,
+  "bbox_right": 97,
   "bbox_top": 0,
-  "bbox_bottom": 157,
+  "bbox_bottom": 97,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 191,
-  "height": 158,
+  "width": 98,
+  "height": 98,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c4a9ac6e-45cf-4315-a596-aa116d5f7b05","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c4a9ac6e-45cf-4315-a596-aa116d5f7b05","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},"LayerId":{"name":"4ec38b0b-36f7-4782-ae16-9724d355ad21","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_CoinChestIcon","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},"resourceVersion":"1.0","name":"c4a9ac6e-45cf-4315-a596-aa116d5f7b05","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"abebd672-4cd1-45bf-9f1c-f1b6b028e0fc","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"abebd672-4cd1-45bf-9f1c-f1b6b028e0fc","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},"LayerId":{"name":"69a81bb6-e4bd-4e98-9600-05027540a68f","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_CoinChestIcon","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},"resourceVersion":"1.0","name":"abebd672-4cd1-45bf-9f1c-f1b6b028e0fc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_CoinChestIcon","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"88a405eb-cc82-428f-acd9-cae1778eb658","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4a9ac6e-45cf-4315-a596-aa116d5f7b05","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"7f079701-3794-4cab-862e-a8914a1523c4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abebd672-4cd1-45bf-9f1c-f1b6b028e0fc","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,8 +54,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 95,
-    "yorigin": 79,
+    "xorigin": 49,
+    "yorigin": 49,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_CoinChestIcon","path":"sprites/s_CoinChestIcon/s_CoinChestIcon.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4ec38b0b-36f7-4782-ae16-9724d355ad21","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"69a81bb6-e4bd-4e98-9600-05027540a68f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Main Screen",

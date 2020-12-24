@@ -61,6 +61,8 @@ if (has_completed) {
 // Start streaming fog and dust particles
 if (can_spawn_particles) {
 	
+	show_debug_message("spawned particles");
+	
 	var cam_x = camera_get_view_x(view_camera[0]);
 	var cam_y = camera_get_view_y(view_camera[0]);
 	var xp = cam_x;
